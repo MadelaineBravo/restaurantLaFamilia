@@ -1,11 +1,103 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=@, initial-scale=1.0">
-    <title>Document</title>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Restaurante "La Familia"</title>
+  <link rel="stylesheet" href="./CSS/style.css">
 </head>
 <body>
-    
+
+  <header>
+    <div class="header-container">
+      <!-- Menú hamburguesa -->
+      <div class="menu-toggle" onclick="toggleMenu()">☰</div>
+  
+      <!-- Logo centrado -->
+      <div class="logo">
+        <img src="img/logo.jpg" alt="La Familia" />
+      </div>
+  
+      <!-- Selector de idioma -->
+      <div class="idiomas">
+        <select>
+          <option value="es">ES</option>
+          <option value="en">EN</option>
+          <option value="fr">FR</option>
+        </select>
+      </div>
+    </div>
+  
+    <!-- Navegación (inicialmente oculta en móvil) -->
+    <nav class="menu">
+      <a href="#">Inicio</a>
+      <a href="#">Menú</a>
+      <a href="#">Dónde encontrarnos</a>
+    </nav>
+  </header>
+  
+
+  <main>
+    <section class="imagendeportada">
+      <img src="img/PORTADA.jpg" alt="Portada del restaurante">
+    </section>
+
+    <section>
+      <h1>Nuestros platos populares</h1>
+      <div class="carrusel-responsive">
+        <div class="card">
+          <h3>Plato 1</h3>
+          <img src="img/plato 1.jpg" alt="Plato 1" onclick="expandImage(this)">
+          <p>Descripción del plato 1.</p>
+        </div>
+        <div class="card">
+          <h3>Plato 2</h3>
+          <img src="img/plato 2.jpg" alt="Plato 2" onclick="expandImage(this)">
+          <p>Descripción del plato 2.</p>
+        </div>
+        <div class="card">
+          <h3>Plato 3</h3>
+          <img src="img/plato 3.jpg" alt="Plato 3" onclick="expandImage(this)">
+          <p>Descripción del plato 3.</p>
+        </div>
+      </div>
+    </section>
+
+    <section>
+      <h1>Nuestro restaurante</h1>
+      <div class="carrusel-responsive">
+        <div class="card">
+          <h3>Instalacion 1</h3>
+          <img src="img/plato 1.jpg" alt="Instalacion 1" onclick="expandImage(this)">
+          <p>Descripción de la imagen 1.</p>
+        </div>
+        <div class="card">
+          <h3>Instalacion 2</h3>
+          <img src="img/plato 2.jpg" alt="Instalacion 2" onclick="expandImage(this)">
+          <p>Descripción de la imagen 2.</p>
+        </div>
+        <div class="card">
+          <h3>Instalacion 3</h3>
+          <img src="img/plato 3.jpg" alt="Instalacion 3" onclick="expandImage(this)">
+          <p>Descripción de la imagen 3.</p>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- Modal -->
+  <div id="modal">
+    <span onclick="closeModal()">✖</span>
+    <img id="modalImg" src="" alt="Imagen ampliada">
+  </div>
+
+  <script src="./JS/app.js"></script>
+  <footer>
+    <section>
+      <h3>Ubicación</h3>
+      <p>C/ de Padilla, 223, Eixample, 08013 Barcelona.</p>
+      </section>
+    <p>©2025 Bar restaurant La Familia. Todos los derechos reservados.</p>
+  </footer>
 </body>
 </html>

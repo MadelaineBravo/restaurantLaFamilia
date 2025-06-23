@@ -1,0 +1,295 @@
+:root {
+    --rojo: #D72638;
+    --blanco: #F8F6F3;
+    --gris: #2A2A2A;
+    --azul: #003E6B;
+    --amarillo: #DDFA54;
+  }
+  
+  /* BASE GENERAL */
+  
+  body {
+    margin: 0;
+    font-family: sans-serif;
+    background-color: var(--blanco);
+    color: var(--gris);
+  }
+  
+  h1 {
+    color: var(--rojo);
+    text-align: center;
+    margin-top: 2em;
+  }
+  
+  h3 {
+    margin: 0.5rem 0;
+    color: var(--azul);
+    font-size: 1.2rem;
+  }
+  
+  p {
+    font-size: 0.95rem;
+    color: var(--gris);
+  }
+  
+  /* HEADER */
+/* ===== HEADER ===== */
+
+header {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    background-color: var(--rojo);
+    border-bottom: 1px solid var(--gris);
+    z-index: 1000;
+    transition: background-color 0.3s ease;
+  }
+  
+  header.transparent {
+    background-color: rgba(255, 255, 255, 0.85);
+    backdrop-filter: blur(5px);
+  }
+  
+  .header-container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    position: relative;
+    max-width: 1200px;
+    margin: 0 auto;
+    height: 60px;
+    padding: 0 1rem;
+  }
+  
+  /* Hamburguesa a la izquierda */
+  .menu-toggle {
+    font-size: 1.8rem;
+    cursor: pointer;
+    color: var(--rojo);
+    z-index: 2;
+  }
+  
+  /* Logo absolutamente centrado */
+  .logo {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+  }
+  
+  .logo img {
+    height: 45px;
+  }
+  
+  /* Idiomas a la derecha */
+  .idiomas select {
+    background: var(--amarillo);
+    border: none;
+    font-size: 1rem;
+    color: var(--gris);
+    cursor: pointer;
+  }
+  
+  /* Menú desplegable móvil */
+  nav.menu {
+    display: none;
+    flex-direction: column;
+    align-items: center;
+    background: var(--rojo);
+    padding: 1rem 0;
+    border-top: 1px solid var(--gris);
+    position: absolute;
+    top: 100%;
+    left: 0;
+    right: 0;
+  }
+  
+  nav.menu.show {
+    display: flex;
+  }
+  
+  nav.menu a {
+    text-decoration: none;
+    color: var(--gris);
+    font-weight: bold;
+    font-size: 1rem;
+    padding: 0.5rem 0;
+  }
+  
+  /* ===== VERSIÓN ESCRITORIO ===== */
+  @media (min-width: 768px) {
+    .menu-toggle {
+      display: none;
+    }
+  
+    nav.menu {
+      display: flex !important;
+      flex-direction: row;
+      justify-content: center;
+      position: static;
+      border: none;
+      padding: 0;
+    }
+  
+    nav.menu a {
+      margin: 0 1rem;
+    }
+  }
+  
+  /* PORTADA */
+  
+  .imagendeportada img {
+    width: 100%;
+    height: auto;
+    display: block;
+    margin-top: 60px; /* compensar header fijo */
+  }
+  
+  /* CARRUSELES */
+  
+  .carrusel-responsive {
+    display: flex;
+    overflow-x: auto;
+    gap: 1rem;
+    padding: 1rem;
+    scroll-snap-type: x mandatory;
+    -webkit-overflow-scrolling: touch;
+  }
+  
+  /* TARJETAS */
+  
+  .card {
+    flex: 0 0 80%;
+    max-width: 300px;
+    background: white;
+    border: 2px solid var(--gris);
+    border-radius: 8px;
+    padding: 1rem;
+    scroll-snap-align: start;
+    text-align: center;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+  }
+  
+  .card img {
+    width: 100%;
+    height: auto;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+  
+  /* MODAL */
+  
+  #modal {
+    display: none;
+    position: fixed;
+    inset: 0;
+    background-color: rgba(0, 0, 0, 0.85);
+    justify-content: center;
+    align-items: center;
+    z-index: 999;
+  }
+  
+  #modal.show {
+    display: flex;
+  }
+  
+  #modalImg {
+    max-width: 90%;
+    max-height: 80vh;
+    border-radius: 8px;
+  }
+  
+  #modal span {
+    position: absolute;
+    top: 1rem;
+    right: 2rem;
+    color: white;
+    font-size: 2rem;
+    cursor: pointer;
+  }
+  
+  /* RESPONSIVE */
+  
+  @media (min-width: 768px) {
+    .menu-toggle {
+      display: none;
+    }
+  
+    nav.menu {
+      display: flex !important;
+      position: static;
+      flex-direction: row;
+      border: none;
+      padding: 0;
+    }
+  
+    nav.menu a {
+      margin: 0 1rem;
+    }
+  
+    .card {
+      flex: 0 0 250px;
+    }
+  }
+  /* Estilos base para móvil: menú hamburguesa visible, menú oculto */
+.menu {
+    display: none; /* menú completo oculto */
+  }
+  
+  .hamburguesa {
+    display: block; /* icono visible */
+  }
+  
+  /* A partir de 768px (ordenador/tablet) */
+  @media screen and (min-width: 768px) {
+    .menu {
+      display: flex; /* mostramos menú completo */
+    }
+    .hamburguesa {
+      display: none; /* ocultamos hamburguesa */
+    }
+  }
+/* Estilos base para móviles */
+body {
+    margin: 0;
+    font-family: sans-serif;
+    line-height: 1.5;
+    background-color: #fff;
+   }
+   /* Ajustes para pantallas grandes */
+   @media (min-width: 768px) {
+    body {
+    font-size: 1.1em;
+    }
+   }
+/* Overlay */
+#overlay {
+    position: fixed;
+    top: 0; left: 0;
+    width: 100%; height: 100%;
+    background: rgba(0, 0, 0, 0.4);
+    display: none;
+    z-index: 900;
+   }
+   nav.activo {
+    right: 0;
+   }
+/* Pantallas grandes */
+@media (min-width: 768px) {
+    .hamburguesa {
+    display: none;
+    }
+    nav {
+    position: static;
+    height: auto;
+    flex-direction: row;
+    background: none;
+    width: auto;
+    }
+    nav a {
+    padding: 0 10px;
+    }
+    #overlay {
+    display: none !important;
+    }
+   }
+   
