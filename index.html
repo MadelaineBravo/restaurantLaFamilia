@@ -18,16 +18,9 @@
         <img src="img/logo.jpg" alt="La Familia" />
       </div>
   
-      <!-- Selector de idioma -->
-      <div class="idiomas">
-        <select>
-          <option value="es">ES</option>
-          <option value="en">EN</option>
-          <option value="fr">FR</option>
-        </select>
+      <div>
+        <div class="selector-idioma" id="google_translate_element"></div>
       </div>
-    </div>
-  
     <!-- Navegación (inicialmente oculta en móvil) -->
     <nav class="menu">
       <a href="#">Inicio</a>
@@ -92,6 +85,17 @@
   </div>
 
   <script src="./JS/app.js"></script>
+  <script type="text/javascript">
+    function googleTranslateElementInit() {
+      new google.translate.TranslateElement({
+        pageLanguage: 'es', // idioma original de tu web
+        includedLanguages: 'es,ca,en,zh-CN', // idiomas disponibles
+        layout: google.translate.TranslateElement.InlineLayout.SIMPLE
+      }, 'google_translate_element');
+    }
+  </script>
+  <script type="text/javascript" src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
+  
   <footer>
     <section>
       <h3>Ubicación</h3>

@@ -80,15 +80,41 @@ header {
     height: 45px;
   }
   
-  /* Idiomas a la derecha */
-  .idiomas select {
-    background: var(--amarillo);
-    border: none;
-    font-size: 1rem;
-    color: var(--gris);
-    cursor: pointer;
+/* Contenedor del selector de idiomas */
+.selector-idioma {
+    position: absolute;          /* Posicionado con respecto al header */
+    top: 1rem;                   /* Distancia desde la parte superior */
+    left: 1rem;                  /* Alineado a la izquierda */
+    z-index: 1000;               /* Que se mantenga por encima de otros elementos */
+    font-size: 14px;
   }
   
+  /* Estilo del widget generado por Google Translate */
+  .goog-te-gadget {
+    font-family: 'Arial', sans-serif !important;
+    color: #2A2A2A !important;
+  }
+  
+  /* Quitar fondo y bordes si aparecen */
+  .goog-te-gadget-simple {
+    background-color: transparent !important;
+    border: none !important;
+    padding: 0 !important;
+  }
+  
+  /* Quitar subrayado del texto */
+  .goog-te-menu-value span {
+    text-decoration: none !important;
+  }
+  
+  /* Estilos móviles responsivos */
+  @media screen and (max-width: 768px) {
+    .selector-idioma {
+      top: 0.5rem;
+      left: 0.5rem;
+      font-size: 12px;
+    }
+  }
   /* Menú desplegable móvil */
   nav.menu {
     display: none;
