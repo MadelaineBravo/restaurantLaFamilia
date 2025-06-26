@@ -383,3 +383,43 @@ footer p {
         height: 300px;
     }
 }
+@media (max-width: 768px) {
+    /* Portada texto más pequeño y con padding */
+    .portada-texto h1 {
+      font-size: 2rem;
+      padding: 0 1rem;
+    }
+  
+    /* Ajustar altura de la portada para que no ocupe tanto */
+    .portada {
+      height: 50vh;
+    }
+  
+    /* Carta: margenes más estrechos y mejor espaciado */
+    .carta-section {
+      margin: 90px 1rem 50px;
+      padding: 0 1rem;
+    }
+  
+    /* Items de la carta en columna para que se lean bien */
+    .categoria ul li {
+      flex-direction: column;
+      align-items: flex-start;
+    }
+  
+    .categoria ul li p {
+      margin: 0.3rem 0 0 0;
+    }
+  
+    .categoria ul li .precio {
+      min-width: auto;
+      margin-top: 6px;
+    }
+    
+    /* Asegurar que los textos no se desbordan */
+    .categoria ul li h3,
+    .categoria ul li p,
+    .categoria ul li .precio {
+      word-wrap: break-word;
+    }
+  }
