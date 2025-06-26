@@ -1,160 +1,159 @@
-<!DOCTYPE html>
-<html lang="es">
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Restaurante "La Familia"</title>
-  <link rel="stylesheet" href="./CSS/style.css">
-</head>
-<body>
+    <!DOCTYPE html>
+    <html lang="es">
+    <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <title>Restaurante "La Familia"</title>
+    <link rel="stylesheet" href="./CSS/style.css">
+    <!-- Swiper CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.css"/>
+    </head>
+    <body>
 
-  <header>
+    <header>
     <div class="header-container">
-      <!-- Menú hamburguesa -->
-      <div class="menu-toggle" onclick="toggleMenu()">☰</div>
+        <!-- Menú hamburguesa -->
+        <div class="menu-toggle" onclick="toggleMenu()">☰</div>
 
-      <!-- Logo centrado -->
-      <div class="logo">
+        <!-- Logo -->
+        <div class="logo">
         <img src="img/logo.jpg" alt="La Familia" />
-      </div>
+        </div>
 
-      <!-- Selector de idiomas oficial de Google -->
-      <div id="google_translate_element"></div>
+        <div>
+        <div class="selector-idioma" id="google_translate_element"></div>
+        </div>
+        
+        <!-- Navegación -->
+        <nav class="menu">
+        <a href="./index.html">Inicio</a>
+        <a href="./pages/Menu/">Menú</a>
+        <a href="./pages/donde-encontrarnos.html">Dónde encontrarnos</a>
+        </nav>
     </div>
+    </header>
 
-    <!-- Menú de navegación -->
-    <nav class="menu">
-      <a href="#">Inicio</a>
-      <a href="#">Menú</a>
-      <a href="#">Dónde encontrarnos</a>
-    </nav>
-  </header>
-
-  <main>
+    <main>
     <section class="portada">
-      <div class="portada-texto">
+        <div class="portada-texto">
         <h1>Bienvenidos a nuestro restaurante</h1>
-      </div>
+        </div>
     </section>
+
     <section class="carrusel-section">
-      <h2>Platos Populares</h2>
-      <div class="swiper platosSwiper">
+        <h2>Platos Populares</h2>
+        <div class="swiper platosSwiper">
         <div class="swiper-wrapper">
-          <div class="swiper-slide"><img src="/img/plato 1 .jpg" alt="Plato 1"></div>
-          <div class="swiper-slide"><img src="/img/plato 2.jpg" alt="Plato 2"></div>
-          <div class="swiper-slide"><img src="/img/plato 3.jpg" alt="Plato 3"></div>
+            <div class="swiper-slide"><img src="img/plato 1.jpg" alt="Plato 1"></div>
+            <div class="swiper-slide"><img src="img/plato 2.jpg" alt="Plato 2"></div>
+            <div class="swiper-slide"><img src="img/plato 3.jpg" alt="Plato 3"></div>
         </div>
         <div class="swiper-pagination"></div>
-      </div>
+        </div>
     </section>
-  
+
     <section class="carrusel-section">
-      <h2>Nuestras Instalaciones</h2>
-      <div class="swiper instalacionesSwiper">
+        <h2>Nuestras Instalaciones</h2>
+        <div class="swiper instalacionesSwiper">
         <div class="swiper-wrapper">
-          <div class="swiper-slide"><img src="/img/restaurante 1.jpg" alt="Instalación 1"></div>
-          <div class="swiper-slide"><img src="/img/restaurante 2.jpg" alt="Instalación 2"></div>
-          <div class="swiper-slide"><img src="/img/restaurante 3.jpg" alt="Instalación 3"></div>
+            <div class="swiper-slide"><img src="img/restaurante 1.jpg" alt="Instalación 1"></div>
+            <div class="swiper-slide"><img src="img/restaurante 2.jpg" alt="Instalación 2"></div>
+            <div class="swiper-slide"><img src="img/restaurante 3.jpg" alt="Instalación 3"></div>
         </div>
         <div class="swiper-pagination"></div>
-      </div>
+        </div>
     </section>  
-  </main>
+    </main>
 
-  <!-- Footer -->
-  <footer>
-    <section>
-      <h3>Ubicación</h3>
-      <p>C/ de Padilla, 223, Eixample, 08013 Barcelona.</p>
-    </section>
-    <p>©2025 Bar restaurant La Familia. Todos los derechos reservados.</p>
-  </footer>
+    <footer class="footer">
+    <div class="footer-container">
+        <div class="footer-section">
+        <h3>La Familia</h3>
+        <p>Bar Restaurante.<br>Desde 2020 en el corazón de Barcelona.</p>
+        </div>
+        <div class="footer-section">
+        <h4>Dirección</h4>
+        <p>C/ de Padilla, 223<br>Eixample, 08013 Barcelona</p>
+        </div>
+    </div>
+    <div class="footer-bottom">
+        <p>© 2025 Bar Restaurante La Familia. Todos los derechos reservados.</p>
+    </div>
+    </footer>
 
-  <!-- Cargar el widget oficial de Google Translate -->
-  <script type="text/javascript">
+    <!-- Swiper JS -->
+    <script src="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.js"></script>
+
+    <script>
     function googleTranslateElementInit() {
-      new google.translate.TranslateElement({
-        pageLanguage: 'es', // idioma original de tu web
-        includedLanguages: 'es,ca,en,zh-CN', // idiomas disponibles
+        new google.translate.TranslateElement({
+        pageLanguage: 'es',
+        includedLanguages: 'es,ca,en,zh-CN',
         layout: google.translate.TranslateElement.InlineLayout.SIMPLE
-      }, 'google_translate_element');
+        }, 'google_translate_element');
     }
-  </script>
-  <script type="text/javascript" src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
-  <!-- Swiper CSS -->
-  <link
-    rel="stylesheet"
-    href="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.css"
-  />
 
-  <!-- Swiper JS -->
-  <script src="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.js"></script>
-
-  <script>
-    // Función para abrir/cerrar menú hamburguesa
     function toggleMenu() {
-      const menu = document.querySelector('nav.menu');
-      menu.classList.toggle('menu-open');
+        const menu = document.querySelector('nav.menu');
+        menu.classList.toggle('menu-open');
     }
 
-    // Cerrar menú al hacer click en un enlace (útil en móvil)
     function closeMenuOnLinkClick() {
-      const menu = document.querySelector('nav.menu');
-      if (menu.classList.contains('menu-open')) {
+        const menu = document.querySelector('nav.menu');
+        if (menu.classList.contains('menu-open')) {
         menu.classList.remove('menu-open');
-      }
+        }
     }
 
-    // Añadir evento a enlaces del menú para cerrar menú
     document.querySelectorAll('nav.menu a').forEach(link => {
-      link.addEventListener('click', closeMenuOnLinkClick);
+        link.addEventListener('click', closeMenuOnLinkClick);
+    });
+
+    let lastScrollTop = 0;
+    const header = document.querySelector('header');
+
+    window.addEventListener('scroll', () => {
+        let scrollTop = window.pageYOffset || document.documentElement.scrollTop;
+        if (scrollTop > lastScrollTop && scrollTop > 100) {
+        header.classList.add('oculto');
+        } else {
+        header.classList.remove('oculto');
+        }
+        lastScrollTop = scrollTop <= 0 ? 0 : scrollTop;
     });
 
     // Inicialización de Swiper para Platos Populares
     const platosSwiper = new Swiper('.platosSwiper', {
-      loop: true,
-      pagination: {
+        loop: true,
+        pagination: {
         el: '.platosSwiper .swiper-pagination',
         clickable: true,
-      },
-      slidesPerView: 1,
-      spaceBetween: 10,
-      autoplay: {
+        },
+        slidesPerView: 1,
+        spaceBetween: 10,
+        autoplay: {
         delay: 3000,
         disableOnInteraction: false,
-      },
+        },
     });
 
     // Inicialización de Swiper para Instalaciones
     const instalacionesSwiper = new Swiper('.instalacionesSwiper', {
-      loop: true,
-      pagination: {
+        loop: true,
+        pagination: {
         el: '.instalacionesSwiper .swiper-pagination',
         clickable: true,
-      },
-      slidesPerView: 1,
-      spaceBetween: 10,
-      autoplay: {
+        },
+        slidesPerView: 1,
+        spaceBetween: 10,
+        autoplay: {
         delay: 4000,
         disableOnInteraction: false,
-      },
+        },
     });
-    let lastScrollTop = 0;
-const header = document.querySelector('header');
+    </script>
 
-window.addEventListener('scroll', () => {
-  let scrollTop = window.pageYOffset || document.documentElement.scrollTop;
-  if (scrollTop > lastScrollTop && scrollTop > 100) {
-    // Scroll hacia abajo, ocultar header
-    header.classList.add('oculto');
-  } else {
-    // Scroll hacia arriba, mostrar header
-    header.classList.remove('oculto');
-  }
-  lastScrollTop = scrollTop <= 0 ? 0 : scrollTop; // Para evitar valores negativos
-});
+    <script type="text/javascript" src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
 
-  </script>
-
-</body>
-</html>
+    </body>
+    </html>

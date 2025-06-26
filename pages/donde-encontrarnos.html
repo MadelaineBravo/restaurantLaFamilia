@@ -1,255 +1,118 @@
-<!DOCTYPE html>
-<html lang="es">
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Dónde encontrarnos - Restaurante La Familia</title>
+    <!DOCTYPE html>
+    <html lang="es">
+    <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <title>Dónde encontrarnos - Restaurante La Familia</title>
+    <link rel="stylesheet" href="../CSS/style.css" />
+    </head>
+    <body>
 
-  <!-- CSS principal -->
-  <link rel="stylesheet" href="/CSS/style.css" />
-  <!-- Swiper CSS -->
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.css" />
-
-  <!-- Estilos widget Google Translate (mantener) -->
-  <style>
-    .goog-te-banner-frame.skiptranslate,
-    .goog-te-gadget-icon {
-      display: none !important;
-    }
-    body {
-      top: 0 !important;
-    }
-    .language-selector {
-      margin-left: auto;
-    }
-    #google_translate_element select {
-      padding: 4px 8px;
-      border-radius: 4px;
-      background: #f8f6f3;
-      border: 1px solid #ccc;
-      font-size: 14px;
-      color: #2a2a2a;
-    }
-  </style>
-</head>
-<body>
-  <header class="main-header">
-    <div class="header-container container">
-      <button class="menu-toggle" id="menu-toggle" aria-label="Alternar menú de navegación">
-        <span class="icon-bar"></span>
-        <span class="icon-bar"></span>
-        <span class="icon-bar"></span>
-      </button>
-      <div class="logo">
-        <img src="../img/logo.jpg" alt="Logo de Restaurante La Familia" />
-      </div>
-      <nav class="main-nav" id="main-nav">
-        <a href="../index.html" class="nav-link">Inicio</a>
-        <a href="../pages/carta.html" class="nav-link">Carta</a>
-        <a href="../pages/donde-encontrarnos.html" class="nav-link active">Dónde encontrarnos</a>
-      </nav>
-      <div class="language-selector" id="google_translate_element"></div>
-    </div>
-  </header>
-
-  <main class="location-page-content">
-    <section class="location-hero-section">
-      <img src="../img/PORTADA.jpg" alt="Vista exterior del restaurante La Familia" class="hero-image" />
-      <div class="hero-overlay"></div>
-      <div class="hero-content text-center">
-        <h1 class="hero-title">¡Encuéntranos en el Corazón de Barcelona!</h1>
-        <p class="hero-subtitle">Tu destino gastronómico te espera a pocos pasos de los lugares más emblemáticos.</p>
-        <a href="#section-map" class="hero-button scroll-to-map">Ver en el Mapa</a>
-      </div>
-    </section>
-
-    <section class="section-contact-info container">
-      <h2 class="section-title">Detalles de Contacto y Horarios</h2>
-      <div class="contact-grid">
-        <div class="contact-item">
-          <h3 class="item-title">Dirección</h3>
-          <p class="item-text">C/ de Padilla, 223, Eixample</p>
-          <p class="item-text">08013 Barcelona, España</p>
-          <a href="https://maps.app.goo.gl/TUwE5oD3dYgA1A3N8" target="_blank" rel="noopener noreferrer" class="contact-link">Abrir en Google Maps</a>
+    <header>
+        <div class="header-container">
+        <div class="menu-toggle" onclick="toggleMenu()">☰</div>
+        <div class="logo">
+            <img src="../img/logo.jpg" alt="La Familia" />
         </div>
-        <div class="contact-item">
-          <h3 class="item-title">Teléfono</h3>
-          <p class="item-text">+34 93 123 45 67</p>
-          <a href="tel:+34931234567" class="contact-link">Llámanos</a>
-        </div>
-        <div class="contact-item">
-          <h3 class="item-title">Email</h3>
-          <p class="item-text">info@lafamiliarestaurante.es</p>
-          <a href="mailto:info@lafamiliarestaurante.es" class="contact-link">Envíanos un Email</a>
-        </div>
-        <div class="contact-item">
-          <h3 class="item-title">Horarios</h3>
-          <p class="item-text">Martes - Domingo: 13:00 - 16:00 y 20:00 - 23:00</p>
-          <p class="item-text">Lunes: Cerrado</p>
-        </div>
-      </div>
-    </section>
-
-    <section class="section-map container" id="section-map">
-      <h2 class="section-title">Encuéntranos Fácilmente</h2>
-      <div class="map-iframe-wrapper responsive-iframe">
-        <iframe
-          src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2993.597143169773!2d2.177415276610563!3d41.406104971295206!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x12a4a32019b0d7d9%3A0x95b002799f8a5576!2sCarrer%20de%20Padilla%2C%20223%2C%2008013%20Barcelona!5e0!3m2!1ses!2ses!4v1719167336521!5m2!1ses!2ses"
-          width="100%" height="450" style="border:0;" allowfullscreen="" loading="lazy"
-          referrerpolicy="no-referrer-when-downgrade" title="Ubicación del Restaurante La Familia en Google Maps">
-        </iframe>
-      </div>
-    </section>
-
-    <section class="section-how-to-get-there container">
-      <h2 class="section-title">Cómo Llegar</h2>
-      <div class="transport-options-grid">
-        <div class="transport-item">
-          <h3 class="item-title">Metro</h3>
-          <p class="item-text">Línea L2 (Encants) - <span class="font-semibold">3 min a pie</span></p>
-          <p class="item-text">Línea L5 (Sagrada Família) - <span class="font-semibold">8 min a pie</span></p>
-        </div>
-        <div class="transport-item">
-          <h3 class="item-title">Bus</h3>
-          <p class="item-text">Líneas: H10, 33, 34, 50, V21</p>
-          <p class="item-text">Paradas cercanas a <span class="font-semibold">2 min a pie</span></p>
-        </div>
-        <div class="transport-item">
-          <h3 class="item-title">Caminando</h3>
-          <p class="item-text">A solo <span class="font-semibold">5 minutos</span> de la Sagrada Família</p>
-          <p class="item-text">Paseo agradable desde otros puntos de interés.</p>
-        </div>
-      </div>
-    </section>
-
-    <section class="section-nearby-attractions container">
-      <h2 class="section-title">Explora Barcelona Cerca de Nosotros</h2>
-      <p class="section-description">Estamos orgullosos de nuestra ubicación privilegiada. Visita estos increíbles lugares antes o después de tu comida.</p>
-      <div class="swiper attractions-swiper">
-        <div class="swiper-wrapper">
-          <!-- Slides de atracciones -->
-          <div class="swiper-slide attraction-card">
-            <img src="https://placehold.co/600x400/98C1D9/FFFFFF?text=Sagrada+Familia" alt="Sagrada Família, Barcelona" class="attraction-image" />
-            <div class="attraction-content">
-              <h3 class="attraction-title">Sagrada Família</h3>
-              <p class="attraction-description">La obra maestra inacabada de Gaudí, un icono de Barcelona. A solo 5 minutos a pie.</p>
-              <a href="https://sagradafamilia.org/es/" target="_blank" rel="noopener noreferrer" class="attraction-link">Más información</a>
-            </div>
-          </div>
-          <div class="swiper-slide attraction-card">
-            <img src="https://placehold.co/600x400/8D99AE/FFFFFF?text=Hospital+Sant+Pau" alt="Hospital de Sant Pau, Barcelona" class="attraction-image" />
-            <div class="attraction-content">
-              <h3 class="attraction-title">Recinto Modernista de Sant Pau</h3>
-              <p class="attraction-description">Un impresionante complejo modernista y Patrimonio de la Humanidad por la UNESCO. Muy cerca.</p>
-              <a href="https://www.santpaubarcelona.org/es/" target="_blank" rel="noopener noreferrer" class="attraction-link">Más información</a>
-            </div>
-          </div>
-          <div class="swiper-slide attraction-card">
-            <img src="https://placehold.co/600x400/E0FBFC/000000?text=Paseo+de+Gracia" alt="Paseo de Gracia, Barcelona" class="attraction-image" />
-            <div class="attraction-content">
-              <h3 class="attraction-title">Passeig de Gràcia</h3>
-              <p class="attraction-description">Famosa avenida con obras de Gaudí (Casa Batlló, La Pedrera) y tiendas de lujo. A 15 min en metro.</p>
-              <a href="https://www.barcelonaturisme.com/wv3/es/page/507/passeig-de-gracia.html" target="_blank" rel="noopener noreferrer" class="attraction-link">Más información</a>
-            </div>
-          </div>
-          <div class="swiper-slide attraction-card">
-            <img src="https://placehold.co/600x400/ADD8E6/000000?text=Parque+Guell" alt="Parque Güell, Barcelona" class="attraction-image" />
-            <div class="attraction-content">
-              <h3 class="attraction-title">Parque Güell</h3>
-              <p class="attraction-description">El mágico parque de Gaudí con vistas panorámicas de la ciudad. A 20 min en bus.</p>
-              <a href="https://parkguell.barcelona/es/" target="_blank" rel="noopener noreferrer" class="attraction-link">Más información</a>
-            </div>
-          </div>
-          <div class="swiper-slide attraction-card">
-            <img src="https://placehold.co/600x400/C0C0C0/000000?text=Torre+Glories" alt="Torre Glòries, Barcelona" class="attraction-image" />
-            <div class="attraction-content">
-              <h3 class="attraction-title">Torre Glòries</h3>
-              <p class="attraction-description">Un rascacielos icónico con una arquitectura distintiva, especialmente de noche. Cerca de nuestro restaurante.</p>
-              <a href="https://www.miradortorreglories.com/es/" target="_blank" rel="noopener noreferrer" class="attraction-link">Más información</a>
-            </div>
-          </div>
+        <div id="google_translate_element"></div>
         </div>
 
-        <!-- Paginación y navegación -->
-        <div class="swiper-pagination attractions-pagination"></div>
-        <div class="swiper-button-prev attractions-prev"></div>
-        <div class="swiper-button-next attractions-next"></div>
-      </div>
-    </section>
+        <nav class="menu">
+        <a href="../index.html">Inicio</a>
+        <a href="../pages/carta.html">Menú</a>
+        <a href="donde-encontrarnos.html" class="active">Dónde encontrarnos</a>
+        </nav>
+    </header>
 
-    <section class="section-final-cta container text-center">
-      <h2 class="section-title">¡Te Esperamos en La Familia!</h2>
-      <p class="section-description">Ven a disfrutar de una experiencia culinaria inolvidable después de explorar la belleza de Barcelona.</p>
-      <a href="../pages/carta.html" class="cta-button">Ver Nuestra Carta</a>
-      <a href="#section-contact-info" class="cta-button secondary-cta-button">Contactar / Reservar</a>
-    </section>
-  </main>
+    <main>
+        <section class="portada">
+        <div class="portada-texto">
+            <h1>¿Dónde encontrarnos?</h1>
+        </div>
+        </section>
 
-  <footer class="main-footer">
-    <div class="footer-content container">
-      <p>&copy; 2025 Restaurante La Familia. Todos los derechos reservados.</p>
-      <div class="social-links">
-        <a href="#" aria-label="Facebook del Restaurante">Facebook</a>
-        <a href="#" aria-label="Instagram del Restaurante">Instagram</a>
-        <a href="#" aria-label="Twitter del Restaurante">Twitter</a>
-      </div>
-    </div>
-  </footer>
+        <section class="contenido principal-contenido">
+        <h2>Cómo llegar</h2>
+        <p>
+            Nuestro restaurante está situado en el corazón del Eixample de Barcelona, en la calle de Padilla, número 223.
+            Puedes llegar fácilmente en transporte público: las estaciones de metro más cercanas son Girona (L4) y Tetuan (L2).
+            También contamos con aparcamiento público cercano.
+        </p>
 
-  <!-- Google Translate -->
-  <script>
-    function googleTranslateElementInit() {
-      new google.translate.TranslateElement({
-        pageLanguage: 'es',
-        includedLanguages: 'es,ca,en,zh-CN',
-        layout: google.translate.TranslateElement.InlineLayout.SIMPLE,
-      }, 'google_translate_element');
-    }
-  </script>
-  <script src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
+        <h2>Mapa</h2>
+        <div class="mapa-container">
+            <iframe 
+            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2992.525974102476!2d2.168694315450269!3d41.396563179263434!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x12a4a2f5a7039bbd%3A0x2432e4a03f8d18e7!2sCarrer%20de%20Padilla%2C%20223%2C%2008013%20Barcelona!5e0!3m2!1ses!2ses!4v1698398888473!5m2!1ses!2ses" 
+            width="100%" 
+            height="450" 
+            style="border:0;" 
+            allowfullscreen="" 
+            loading="lazy" 
+            referrerpolicy="no-referrer-when-downgrade"
+            title="Mapa de ubicación Restaurante La Familia"
+            ></iframe>
+        </div>
 
-  <!-- Swiper JS -->
-  <script src="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.js"></script>
+        <h2>Información turística de Barcelona</h2>
+        <p>
+            Barcelona es una ciudad vibrante con una rica historia, arquitectura modernista y hermosas playas.
+            Además de visitar nuestro restaurante, puedes disfrutar de la Sagrada Familia, el Parque Güell, Las Ramblas y el Barrio Gótico.
+            ¡No olvides probar nuestra gastronomía local durante tu estancia!
+        </p>
+        </section>
+    </main>
 
-  <!-- Script principal -->
-  <script src="../JS/script.js"></script>
+    <footer>
+        <section>
+        <h3>Ubicación</h3>
+        <p>C/ de Padilla, 223, Eixample, 08013 Barcelona.</p>
+        </section>
+        <p>©2025 Bar restaurant La Familia. Todos los derechos reservados.</p>
+    </footer>
 
-  <script>
-    document.addEventListener('DOMContentLoaded', () => {
-      new Swiper('.attractions-swiper', {
-        slidesPerView: 1,
-        spaceBetween: 20,
-        loop: true,
-        pagination: {
-          el: '.attractions-pagination',
-          clickable: true,
-        },
-        navigation: {
-          nextEl: '.attractions-next',
-          prevEl: '.attractions-prev',
-        },
-        breakpoints: {
-          768: {
-            slidesPerView: 2,
-            spaceBetween: 30,
-          },
-          1024: {
-            slidesPerView: 3,
-            spaceBetween: 40,
-          },
-        },
-      });
+    <!-- Google Translate -->
+    <script type="text/javascript">
+        function googleTranslateElementInit() {
+        new google.translate.TranslateElement({
+            pageLanguage: 'es',
+            includedLanguages: 'es,ca,en,zh-CN',
+            layout: google.translate.TranslateElement.InlineLayout.SIMPLE
+        }, 'google_translate_element');
+        }
+    </script>
+    <script type="text/javascript" src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
 
-      const scrollToMapButton = document.querySelector('.scroll-to-map');
-      if (scrollToMapButton) {
-        scrollToMapButton.addEventListener('click', e => {
-          e.preventDefault();
-          document.querySelector(scrollToMapButton.getAttribute('href')).scrollIntoView({
-            behavior: 'smooth',
-          });
+    <!-- Script menú hamburguesa y scroll header -->
+    <script>
+        function toggleMenu() {
+        const menu = document.querySelector('nav.menu');
+        menu.classList.toggle('menu-open');
+        }
+
+        function closeMenuOnLinkClick() {
+        const menu = document.querySelector('nav.menu');
+        if (menu.classList.contains('menu-open')) {
+            menu.classList.remove('menu-open');
+        }
+        }
+
+        document.querySelectorAll('nav.menu a').forEach(link => {
+        link.addEventListener('click', closeMenuOnLinkClick);
         });
-      }
-    });
-  </script>
-</body>
-</html>
+
+        let lastScrollTop = 0;
+        const header = document.querySelector('header');
+
+        window.addEventListener('scroll', () => {
+        let scrollTop = window.pageYOffset || document.documentElement.scrollTop;
+        if (scrollTop > lastScrollTop && scrollTop > 100) {
+            header.classList.add('oculto');
+        } else {
+            header.classList.remove('oculto');
+        }
+        lastScrollTop = scrollTop <= 0 ? 0 : scrollTop;
+        });
+    </script>
+
+    </body>
+    </html>

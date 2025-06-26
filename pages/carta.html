@@ -1,85 +1,203 @@
-<!DOCTYPE html>
-<html lang="es">
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Carta - Restaurante La Familia</title>
-  <link rel="stylesheet" href="/CSS/style.css" />
-</head>
-<body>
-  <h1>Carta - Restaurante La Familia</h1>
+    <!DOCTYPE html>
+    <html lang="es">
+    <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <title>Carta - Restaurante La Familia</title>
+    <link rel="stylesheet" href="../CSS/style.css" />
+    <style>
+    /* Estilos para el filtro */
+    .filtro-categorias {
+        text-align: center;
+        margin-bottom: 20px;
+    }
 
-  <div class="filters">
-    <button class="filter-btn active" data-category="all">Todos</button>
-    <button class="filter-btn" data-category="tapas">Tapas</button>
-    <button class="filter-btn" data-category="bebidas">Bebidas</button>
-    <button class="filter-btn" data-category="bocadillos">Bocadillos</button>
-    <button class="filter-btn" data-category="postres">Postres</button>
-  </div>
+    .filtro-btn {
+        cursor: pointer;
+        background-color: #D72638;
+        color: white;
+        border: none;
+        margin: 0 8px;
+        padding: 8px 18px;
+        border-radius: 5px;
+        font-weight: 600;
+        transition: background-color 0.3s ease;
+    }
 
-  <div class="menu-items">
-    <div class="menu-item" data-category="tapas">
-      <img src="https://via.placeholder.com/300x150?text=Patatas+Bravas" alt="Patatas Bravas" />
-      <h3>Patatas Bravas</h3>
-      <p>Patatas fritas con salsa picante tradicional.</p>
-      <div class="price">5,50 €</div>
-    </div>
-    <div class="menu-item" data-category="bebidas">
-      <img src="https://via.placeholder.com/300x150?text=Cerveza" alt="Cerveza" />
-      <h3>Cerveza Artesanal</h3>
-      <p>Cerveza fresca y natural de la región.</p>
-      <div class="price">3,00 €</div>
-    </div>
-    <div class="menu-item" data-category="bocadillos">
-      <img src="https://via.placeholder.com/300x150?text=Bocadillo+de+Jamón" alt="Bocadillo de Jamón" />
-      <h3>Bocadillo de Jamón</h3>
-      <p>Pan crujiente con jamón ibérico de bellota.</p>
-      <div class="price">6,80 €</div>
-    </div>
-    <div class="menu-item" data-category="postres">
-      <img src="https://via.placeholder.com/300x150?text=Flan+Casero" alt="Flan Casero" />
-      <h3>Flan Casero</h3>
-      <p>Flan tradicional con caramelo casero.</p>
-      <div class="price">4,50 €</div>
-    </div>
-    <div class="menu-item" data-category="tapas">
-      <img src="https://via.placeholder.com/300x150?text=Calamares" alt="Calamares a la Romana" />
-      <h3>Calamares a la Romana</h3>
-      <p>Calamares fritos con alioli casero.</p>
-      <div class="price">7,00 €</div>
-    </div>
-    <div class="menu-item" data-category="bebidas">
-      <img src="https://via.placeholder.com/300x150?text=Vino+Tinto" alt="Vino Tinto" />
-      <h3>Vino Tinto Rioja</h3>
-      <p>Copa de vino tinto con cuerpo y aroma intenso.</p>
-      <div class="price">4,20 €</div>
-    </div>
-  </div>
+    .filtro-btn:hover,
+    .filtro-btn.active {
+        background-color: #a71d2a;
+    }
+    </style>
+    </head>
+    <body>
 
-  <script>
-    const filterButtons = document.querySelectorAll('.filter-btn');
-    const menuItems = document.querySelectorAll('.menu-item');
+    <header>
+        <div class="header-container">
+        <div class="menu-toggle" onclick="toggleMenu()">☰</div>
+        <div class="logo">
+            <img src="../img/logo.jpg" alt="La Familia" />
+        </div>
+        <div id="google_translate_element"></div>
+        </div>
 
-    filterButtons.forEach(button => {
-      button.addEventListener('click', () => {
-        filterButtons.forEach(btn => btn.classList.remove('active'));
-        button.classList.add('active');
+        <nav class="menu">
+        <a href="../index.html">Inicio</a>
+        <a href="carta.html" class="active">Menú</a>
+        <a href="donde-encontrarnos.html">Dónde encontrarnos</a>
+        </nav>
+    </header>
 
-        const category = button.dataset.category;
+    <main>
+        <section class="carta-section">
 
-        menuItems.forEach(item => {
-          if (category === 'all') {
-            item.classList.remove('hidden');
-          } else {
-            if (item.dataset.category === category) {
-              item.classList.remove('hidden');
-            } else {
-              item.classList.add('hidden');
-            }
-          }
+        <div class="filtro-categorias">
+        <button class="filtro-btn active" data-categoria="todos">Todos</button>
+        <button class="filtro-btn" data-categoria="entrantes">Entrantes</button>
+        <button class="filtro-btn" data-categoria="platos-principales">Platos Principales</button>
+        <button class="filtro-btn" data-categoria="postres">Postres</button>
+        <button class="filtro-btn" data-categoria="bebidas">Bebidas</button>
+        </div>
+
+        <h1>Nuestra Carta</h1>
+
+        <article class="categoria" data-categoria="entrantes">
+            <h2>Entrantes</h2>
+            <ul>
+            <li>
+                <h3>Ensalada Mediterránea</h3>
+                <p>Lechuga, tomate, aceitunas, queso feta y aderezo especial.</p>
+                <span class="precio">5,50 €</span>
+            </li>
+            <li>
+                <h3>Tabla de Quesos</h3>
+                <p>Selección de quesos artesanales con frutos secos.</p>
+                <span class="precio">8,00 €</span>
+            </li>
+            </ul>
+        </article>
+
+        <article class="categoria" data-categoria="platos-principales">
+            <h2>Platos Principales</h2>
+            <ul>
+            <li>
+                <h3>Paella Valenciana</h3>
+                <p>Arroz con mariscos frescos, pollo y verduras.</p>
+                <span class="precio">14,00 €</span>
+            </li>
+            <li>
+                <h3>Solomillo a la Plancha</h3>
+                <p>Solomillo de ternera con salsa de champiñones y guarnición.</p>
+                <span class="precio">18,50 €</span>
+            </li>
+            </ul>
+        </article>
+
+        <article class="categoria" data-categoria="postres">
+            <h2>Postres</h2>
+            <ul>
+            <li>
+                <h3>Flan Casero</h3>
+                <p>Flan tradicional con caramelo.</p>
+                <span class="precio">4,00 €</span>
+            </li>
+            <li>
+                <h3>Tarta de Queso</h3>
+                <p>Tarta de queso con base de galleta y mermelada de frutos rojos.</p>
+                <span class="precio">4,50 €</span>
+            </li>
+            </ul>
+        </article>
+
+        <article class="categoria" data-categoria="bebidas">
+            <h2>Bebidas</h2>
+            <ul>
+            <li>
+                <h3>Vino Tinto</h3>
+                <span class="precio">3,00 €</span>
+            </li>
+            <li>
+                <h3>Cerveza Artesanal</h3>
+                <span class="precio">3,50 €</span>
+            </li>
+            </ul>
+        </article>
+        </section>
+    </main>
+
+    <footer>
+        <section>
+        <h3>Ubicación</h3>
+        <p>C/ de Padilla, 223, Eixample, 08013 Barcelona.</p>
+        </section>
+        <p>©2025 Bar restaurant La Familia. Todos los derechos reservados.</p>
+    </footer>
+
+    <!-- Google Translate -->
+    <script type="text/javascript">
+        function googleTranslateElementInit() {
+        new google.translate.TranslateElement({
+            pageLanguage: 'es',
+            includedLanguages: 'es,ca,en,zh-CN',
+            layout: google.translate.TranslateElement.InlineLayout.SIMPLE
+        }, 'google_translate_element');
+        }
+    </script>
+    <script type="text/javascript" src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
+
+    <!-- Script menú hamburguesa y scroll header -->
+    <script>
+        function toggleMenu() {
+        const menu = document.querySelector('nav.menu');
+        menu.classList.toggle('menu-open');
+        }
+
+        function closeMenuOnLinkClick() {
+        const menu = document.querySelector('nav.menu');
+        if (menu.classList.contains('menu-open')) {
+            menu.classList.remove('menu-open');
+        }
+        }
+
+        document.querySelectorAll('nav.menu a').forEach(link => {
+        link.addEventListener('click', closeMenuOnLinkClick);
         });
-      });
-    });
-  </script>
-</body>
-</html>
+
+        let lastScrollTop = 0;
+        const header = document.querySelector('header');
+
+        window.addEventListener('scroll', () => {
+        let scrollTop = window.pageYOffset || document.documentElement.scrollTop;
+        if (scrollTop > lastScrollTop && scrollTop > 100) {
+            header.classList.add('oculto');
+        } else {
+            header.classList.remove('oculto');
+        }
+        lastScrollTop = scrollTop <= 0 ? 0 : scrollTop;
+        });
+
+        // Filtro por categorías
+        const botonesFiltro = document.querySelectorAll('.filtro-btn');
+        const categorias = document.querySelectorAll('.categoria');
+
+        botonesFiltro.forEach(boton => {
+        boton.addEventListener('click', () => {
+            // Quitar active de todos
+            botonesFiltro.forEach(b => b.classList.remove('active'));
+            boton.classList.add('active');
+
+            const categoria = boton.getAttribute('data-categoria');
+
+            categorias.forEach(cat => {
+            if (categoria === 'todos' || cat.getAttribute('data-categoria') === categoria) {
+                cat.style.display = 'block';
+            } else {
+                cat.style.display = 'none';
+            }
+            });
+        });
+        });
+    </script>
+
+    </body>
+    </html>
