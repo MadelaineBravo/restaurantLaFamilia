@@ -1,257 +1,85 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Carta - Restaurante La Familia</title>
-    <link rel="stylesheet" href="../CSS/style.css">
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.css" />
-    <style>
-        .goog-te-banner-frame.skiptranslate,
-        .goog-te-gadget-icon {
-            display: none !important;
-        }
-        body {
-            top: 0 !important;
-        }
-        .selector-idioma {
-            margin-left: auto;
-        }
-        #google_translate_element select {
-            padding: 4px 8px;
-            border-radius: 4px;
-            background: #f8f6f3;
-            border: 1px solid #ccc;
-            font-size: 14px;
-            color: #2a2a2a;
-        }
-    </style>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Carta - Restaurante La Familia</title>
+  <link rel="stylesheet" href="/CSS/style.css" />
 </head>
 <body>
-    <header class="main-header">
-        <div class="header-container container">
-            <button class="menu-toggle" id="menu-toggle" aria-label="Alternar menú de navegación">
-                <span class="icon-bar"></span>
-                <span class="icon-bar"></span>
-                <span class="icon-bar"></span>
-            </button>
-            <div class="logo">
-                <img src="../img/logo.jpg" alt="Logo de Restaurante La Familia">
-            </div>
-            <nav class="main-nav" id="main-nav">
-                <a href="index.html" class="nav-link">Inicio</a>
-                <a href="carta.html" class="nav-link active">Carta</a>
-                <a href="donde-encontrarnos.html" class="nav-link">Dónde encontrarnos</a>
-            </nav>
-            <div class="language-selector" id="google_translate_element"></div>
-        </div>
-    </header>
+  <h1>Carta - Restaurante La Familia</h1>
 
-    <main class="menu-page-content">
-        <section class="menu-hero-section">
-            <div class="container text-center">
-                <h1 class="menu-title">Nuestra Carta Completa</h1>
-                <p class="menu-description">Explora nuestra selección de platos, bebidas y postres, preparados con los ingredientes más frescos.</p>
-            </div>
-        </section>
+  <div class="filters">
+    <button class="filter-btn active" data-category="all">Todos</button>
+    <button class="filter-btn" data-category="tapas">Tapas</button>
+    <button class="filter-btn" data-category="bebidas">Bebidas</button>
+    <button class="filter-btn" data-category="bocadillos">Bocadillos</button>
+    <button class="filter-btn" data-category="postres">Postres</button>
+  </div>
 
-        <section class="menu-filters container">
-            <div class="filter-buttons-wrapper" role="group" aria-label="Filtrar categorías del menú">
-                <button class="filter-button active" data-category="all">Todos</button>
-                <button class="filter-button" data-category="desayunos">Desayunos</button>
-                <button class="filter-button" data-category="tapas">Tapas</button>
-                <button class="filter-button" data-category="principales">Platos Principales</button>
-                <button class="filter-button" data-category="bebidas">Bebidas</button>
-                <button class="filter-button" data-category="postres">Postres</button>
-            </div>
-        </section>
-
-<!-- Categoría: Desayunos -->
-<div id="category-desayunos" class="menu-category-section" data-category="desayunos">
-    <h2 class="category-title">Desayunos</h2>
-    <div class="menu-items-grid">
-        <article class="menu-item-card">
-            <img src="https://placehold.co/300x200/F0E68C/000000?text=Tostadas+con+Aguacate" alt="Tostadas con Aguacate" class="item-image">
-            <div class="item-content">
-                <h3 class="item-title">Tostadas con Aguacate y Huevo</h3>
-                <p class="item-description">Rebanadas de pan rústico con aguacate fresco, huevo poché y un toque de chile.</p>
-                <span class="item-price">€6.50</span>
-            </div>
-            <button class="add-to-cart-button" aria-label="Añadir Tostadas con Aguacate al pedido">Añadir</button>
-        </article>
-        <article class="menu-item-card">
-            <img src="https://placehold.co/300x200/FFD700/000000?text=Bolleria+Variada" alt="Bollería Variada" class="item-image">
-            <div class="item-content">
-                <h3 class="item-title">Bollería Variada</h3>
-                <p class="item-description">Cruasanes, napolitanas y muffins recién horneados. Pregunta por las opciones del día.</p>
-                <span class="item-price">Desde €2.00</span>
-            </div>
-            <button class="add-to-cart-button" aria-label="Añadir Bollería Variada al pedido">Añadir</button>
-        </article>
+  <div class="menu-items">
+    <div class="menu-item" data-category="tapas">
+      <img src="https://via.placeholder.com/300x150?text=Patatas+Bravas" alt="Patatas Bravas" />
+      <h3>Patatas Bravas</h3>
+      <p>Patatas fritas con salsa picante tradicional.</p>
+      <div class="price">5,50 €</div>
     </div>
-</div>
-
-<!-- Categoría: Tapas -->
-<div id="category-tapas" class="menu-category-section" data-category="tapas">
-    <h2 class="category-title">Tapas</h2>
-    <div class="menu-items-grid">
-        <article class="menu-item-card">
-            <img src="https://placehold.co/300x200/FF6347/FFFFFF?text=Patatas+Bravas" alt="Patatas Bravas" class="item-image">
-            <div class="item-content">
-                <h3 class="item-title">Patatas Bravas</h3>
-                <p class="item-description">Patatas crujientes con salsa picante casera y un suave alioli.</p>
-                <span class="item-price">€5.50</span>
-            </div>
-            <button class="add-to-cart-button" aria-label="Añadir Patatas Bravas al pedido">Añadir</button>
-        </article>
-        <article class="menu-item-card">
-            <img src="https://placehold.co/300x200/4682B4/FFFFFF?text=Calamares+Romana" alt="Calamares a la Romana" class="item-image">
-            <div class="item-content">
-                <h3 class="item-title">Calamares a la Romana</h3>
-                <p class="item-description">Anillas de calamar rebozadas y fritas al momento, acompañadas de limón.</p>
-                <span class="item-price">€7.00</span>
-            </div>
-            <button class="add-to-cart-button" aria-label="Añadir Calamares a la Romana al pedido">Añadir</button>
-        </article>
-        <article class="menu-item-card">
-            <img src="https://placehold.co/300x200/DAA520/FFFFFF?text=Tortilla+Espanola" alt="Tortilla Española" class="item-image">
-            <div class="item-content">
-                <h3 class="item-title">Tortilla Española</h3>
-                <p class="item-description">La clásica tortilla de patatas con cebolla, jugosa y deliciosa.</p>
-                <span class="item-price">€4.80</span>
-            </div>
-            <button class="add-to-cart-button" aria-label="Añadir Tortilla Española al pedido">Añadir</button>
-        </article>
+    <div class="menu-item" data-category="bebidas">
+      <img src="https://via.placeholder.com/300x150?text=Cerveza" alt="Cerveza" />
+      <h3>Cerveza Artesanal</h3>
+      <p>Cerveza fresca y natural de la región.</p>
+      <div class="price">3,00 €</div>
     </div>
-</div>
-
-<!-- Categoría: Platos Principales -->
-<div id="category-principales" class="menu-category-section" data-category="principales">
-    <h2 class="category-title">Platos Principales</h2>
-    <div class="menu-items-grid">
-        <article class="menu-item-card">
-            <img src="https://placehold.co/300x200/8FBC8F/FFFFFF?text=Paella+Marisco" alt="Paella de Marisco" class="item-image">
-            <div class="item-content">
-                <h3 class="item-title">Paella de Marisco</h3>
-                <p class="item-description">Nuestra paella especial con una selección de mariscos frescos del día. (Mínimo 2 personas).</p>
-                <span class="item-price">€18.00 <small>/persona</small></span>
-            </div>
-            <button class="add-to-cart-button" aria-label="Añadir Paella de Marisco al pedido">Añadir</button>
-        </article>
-        <article class="menu-item-card">
-            <img src="https://placehold.co/300x200/B22222/FFFFFF?text=Entrecot+Ternera" alt="Entrecot de Ternera" class="item-image">
-            <div class="item-content">
-                <h3 class="item-title">Entrecot de Ternera a la Brasa</h3>
-                <p class="item-description">Jugoso entrecot de ternera gallega a la brasa, acompañado de guarnición a elegir.</p>
-                <span class="item-price">€22.50</span>
-            </div>
-            <button class="add-to-cart-button" aria-label="Añadir Entrecot de Ternera al pedido">Añadir</button>
-        </article>
-        <article class="menu-item-card">
-            <img src="https://placehold.co/300x200/9ACD32/FFFFFF?text=Lubina+Sal" alt="Lubina a la Sal" class="item-image">
-            <div class="item-content">
-                <h3 class="item-title">Lubina a la Sal</h3>
-                <p class="item-description">Pescado fresco horneado en costra de sal marina, delicioso y ligero.</p>
-                <span class="item-price">€19.00</span>
-            </div>
-            <button class="add-to-cart-button" aria-label="Añadir Lubina a la Sal al pedido">Añadir</button>
-        </article>
+    <div class="menu-item" data-category="bocadillos">
+      <img src="https://via.placeholder.com/300x150?text=Bocadillo+de+Jamón" alt="Bocadillo de Jamón" />
+      <h3>Bocadillo de Jamón</h3>
+      <p>Pan crujiente con jamón ibérico de bellota.</p>
+      <div class="price">6,80 €</div>
     </div>
-</div>
-
-<!-- Categoría: Bebidas -->
-<div id="category-bebidas" class="menu-category-section" data-category="bebidas">
-    <h2 class="category-title">Bebidas</h2>
-    <div class="menu-items-grid">
-        <article class="menu-item-card">
-            <img src="https://placehold.co/300x200/ADD8E6/000000?text=Cerveza+Artesanal" alt="Cerveza Artesanal" class="item-image">
-            <div class="item-content">
-                <h3 class="item-title">Cerveza Artesanal Local</h3>
-                <p class="item-description">Variedades de cerveza artesanal de productores locales. Pregunta por nuestra selección.</p>
-                <span class="item-price">€3.50</span>
-            </div>
-            <button class="add-to-cart-button" aria-label="Añadir Cerveza Artesanal al pedido">Añadir</button>
-        </article>
-        <article class="menu-item-card">
-            <img src="https://placehold.co/300x200/8B0000/FFFFFF?text=Vino+Tinto+Rioja" alt="Vino Tinto Rioja" class="item-image">
-            <div class="item-content">
-                <h3 class="item-title">Vino Tinto Rioja (Copa / Botella)</h3>
-                <p class="item-description">Exquisita selección de vinos Rioja para maridar tus platos.</p>
-                <span class="item-price">€4.00 / €18.00</span>
-            </div>
-            <button class="add-to-cart-button" aria-label="Añadir Vino Tinto Rioja al pedido">Añadir</button>
-        </article>
-        <article class="menu-item-card">
-            <img src="https://placehold.co/300x200/90EE90/000000?text=Aguas+Refrescos" alt="Aguas y Refrescos" class="item-image">
-            <div class="item-content">
-                <h3 class="item-title">Aguas y Refrescos</h3>
-                <p class="item-description">Agua mineral, zumos naturales y una variedad de refrescos.</p>
-                <span class="item-price">Desde €2.00</span>
-            </div>
-            <button class="add-to-cart-button" aria-label="Añadir Bebida al pedido">Añadir</button>
-        </article>
+    <div class="menu-item" data-category="postres">
+      <img src="https://via.placeholder.com/300x150?text=Flan+Casero" alt="Flan Casero" />
+      <h3>Flan Casero</h3>
+      <p>Flan tradicional con caramelo casero.</p>
+      <div class="price">4,50 €</div>
     </div>
-</div>
-
-<!-- Categoría: Postres -->
-<div id="category-postres" class="menu-category-section" data-category="postres">
-    <h2 class="category-title">Postres</h2>
-    <div class="menu-items-grid">
-        <article class="menu-item-card">
-            <img src="https://placehold.co/300x200/F08080/FFFFFF?text=Tarta+de+Queso" alt="Tarta de Queso" class="item-image">
-            <div class="item-content">
-                <h3 class="item-title">Tarta de Queso Casera</h3>
-                <p class="item-description">Nuestra famosa tarta de queso con base de galleta y mermelada de frutos rojos.</p>
-                <span class="item-price">€4.50</span>
-            </div>
-            <button class="add-to-cart-button" aria-label="Añadir Tarta de Queso al pedido">Añadir</button>
-        </article>
-        <article class="menu-item-card">
-            <img src="https://placehold.co/300x200/DDA0DD/FFFFFF?text=Helado+Artesanal" alt="Helado Artesanal" class="item-image">
-            <div class="item-content">
-                <h3 class="item-title">Helado Artesanal</h3>
-                <p class="item-description">Cremosos helados artesanales de sabores variados. Pregunta por los sabores del día.</p>
-                <span class="item-price">€3.50</span>
-            </div>
-            <button class="add-to-cart-button" aria-label="Añadir Helado Artesanal al pedido">Añadir</button>
-        </article>
-        <article class="menu-item-card">
-            <img src="https://placehold.co/300x200/A0522D/FFFFFF?text=Brownie" alt="Brownie con Helado" class="item-image">
-            <div class="item-content">
-                <h3 class="item-title">Brownie con Helado de Vainilla</h3>
-                <p class="item-description">Delicioso brownie de chocolate caliente, servido con una bola de helado de vainilla.</p>
-                <span class="item-price">€5.00</span>
-            </div>
-            <button class="add-to-cart-button" aria-label="Añadir Brownie al pedido">Añadir</button>
-        </article>
+    <div class="menu-item" data-category="tapas">
+      <img src="https://via.placeholder.com/300x150?text=Calamares" alt="Calamares a la Romana" />
+      <h3>Calamares a la Romana</h3>
+      <p>Calamares fritos con alioli casero.</p>
+      <div class="price">7,00 €</div>
     </div>
-</div>
+    <div class="menu-item" data-category="bebidas">
+      <img src="https://via.placeholder.com/300x150?text=Vino+Tinto" alt="Vino Tinto" />
+      <h3>Vino Tinto Rioja</h3>
+      <p>Copa de vino tinto con cuerpo y aroma intenso.</p>
+      <div class="price">4,20 €</div>
+    </div>
+  </div>
 
+  <script>
+    const filterButtons = document.querySelectorAll('.filter-btn');
+    const menuItems = document.querySelectorAll('.menu-item');
 
-    </main>
+    filterButtons.forEach(button => {
+      button.addEventListener('click', () => {
+        filterButtons.forEach(btn => btn.classList.remove('active'));
+        button.classList.add('active');
 
-    <footer class="main-footer">
-        <div class="footer-content container">
-            <p>&copy; 2025 Restaurante La Familia. Todos los derechos reservados.</p>
-            <div class="social-links">
-                <a href="#" aria-label="Facebook del Restaurante">Facebook</a>
-                <a href="#" aria-label="Instagram del Restaurante">Instagram</a>
-                <a href="#" aria-label="Twitter del Restaurante">Twitter</a>
-            </div>
-        </div>
-    </footer>
+        const category = button.dataset.category;
 
-    <script type="text/javascript">
-        function googleTranslateElementInit() {
-            new google.translate.TranslateElement({
-                pageLanguage: 'es',
-                includedLanguages: 'es,ca,en,zh-CN',
-                layout: google.translate.TranslateElement.InlineLayout.SIMPLE
-            }, 'google_translate_element');
-        }
-    </script>
-    <script type="text/javascript" src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
-    <script src="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.js"></script>
-    <script src="../JS/script.js"></script>
+        menuItems.forEach(item => {
+          if (category === 'all') {
+            item.classList.remove('hidden');
+          } else {
+            if (item.dataset.category === category) {
+              item.classList.remove('hidden');
+            } else {
+              item.classList.add('hidden');
+            }
+          }
+        });
+      });
+    });
+  </script>
 </body>
 </html>

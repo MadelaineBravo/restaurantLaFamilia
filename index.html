@@ -1,438 +1,160 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Restaurante La Familia</title>
-    <!-- Enlace al archivo CSS principal -->
-    <link rel="stylesheet" href="./CSS/style.css">
-    <!-- Enlace a la biblioteca Swiper CSS (para los carruseles) -->
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.css" />
-
-    <!-- Estilos específicos para el widget de Google Translate (DEBEN MANTENERSE AQUÍ) -->
-    <style>
-        .goog-te-banner-frame.skiptranslate,
-        .goog-te-gadget-icon {
-            display: none !important;
-        }
-        body {
-            top: 0 !important;
-        }
-        .selector-idioma {
-            margin-left: auto;
-        }
-        #google_translate_element select {
-            padding: 4px 8px;
-            border-radius: 4px;
-            background: #f8f6f3;
-            border: 1px solid #ccc;
-            font-size: 14px;
-            color: #2a2a2a;
-        }
-    </style>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Restaurante "La Familia"</title>
+  <link rel="stylesheet" href="./CSS/style.css">
 </head>
 <body>
-    <!-- Encabezado Principal de la Página -->
-    <header class="main-header">
-        <div class="header-container container">
-            <!-- Botón para el menú móvil (ícono de hamburguesa) -->
-            <button class="menu-toggle" id="menu-toggle" aria-label="Alternar menú de navegación">
-                <span class="icon-bar"></span>
-                <span class="icon-bar"></span>
-                <span class="icon-bar"></span>
-            </button>
-            <div class="logo">
-                <img src="img/logo.jpg" alt="Logo de Restaurante La Familia">
-            </div>
-            <!-- Navegación Principal -->
-            <nav class="main-nav" id="main-nav">
-                <a href="index.html" class="nav-link">Inicio</a>
-                <a href="./pages/carta.html" class="nav-link">Carta</a>
-                <a href="./pages/donde-encontrarnos.html" class="nav-link">Dónde encontrarnos</a>
-            </nav>
-            <!-- Selector de Idioma de Google Translate -->
-            <div class="language-selector" id="google_translate_element"></div>
+
+  <header>
+    <div class="header-container">
+      <!-- Menú hamburguesa -->
+      <div class="menu-toggle" onclick="toggleMenu()">☰</div>
+
+      <!-- Logo centrado -->
+      <div class="logo">
+        <img src="img/logo.jpg" alt="La Familia" />
+      </div>
+
+      <!-- Selector de idiomas oficial de Google -->
+      <div id="google_translate_element"></div>
+    </div>
+
+    <!-- Menú de navegación -->
+    <nav class="menu">
+      <a href="#">Inicio</a>
+      <a href="#">Menú</a>
+      <a href="#">Dónde encontrarnos</a>
+    </nav>
+  </header>
+
+  <main>
+    <section class="portada">
+      <div class="portada-texto">
+        <h1>Bienvenidos a nuestro restaurante</h1>
+      </div>
+    </section>
+    <section class="carrusel-section">
+      <h2>Platos Populares</h2>
+      <div class="swiper platosSwiper">
+        <div class="swiper-wrapper">
+          <div class="swiper-slide"><img src="/img/plato 1 .jpg" alt="Plato 1"></div>
+          <div class="swiper-slide"><img src="/img/plato 2.jpg" alt="Plato 2"></div>
+          <div class="swiper-slide"><img src="/img/plato 3.jpg" alt="Plato 3"></div>
         </div>
-    </header>
-
-    <!-- Contenido Principal de la Página -->
-    <main class="main-content">
-        <!-- Sección de Portada / Héroe -->
-        <section class="hero-section">
-            <img src="img/PORTADA.jpg" alt="Imagen de portada del restaurante La Familia" class="hero-image">
-            <div class="hero-overlay"></div>
-            <div class="hero-content text-center">
-                <h1 class="hero-title">¡Bienvenidos a La Familia!</h1>
-                <p class="hero-subtitle">Ven a disfrutar tus tardes de verano en nuestro restaurante</p>
-                <button class="hero-button">Explora Nuestro Carta</button>
-            </div>
-        </section>
-
-        <!-- Sección de Platos Populares con Carrusel Swiper -->
-        <section class="section-popular-dishes container">
-            <h2 class="section-title">Nuestros Platos Populares</h2>
-            <!-- Contenedor del Carrusel Swiper -->
-            <div class="swiper dishes-swiper">
-                <div class="swiper-wrapper">
-                    <!-- Cada swiper-slide es una tarjeta de plato individual -->
-                    <div class="swiper-slide dish-card">
-                        <img src="img/plato 1 .jpg" alt="Plato 1" class="dish-image">
-                        <h3 class="dish-title">Plato 1</h3>
-                        <p class="dish-description">Descripciones del plato.</p>
-                        <button class="dish-button">Ver Detalles</button>
-                    </div>
-                    <div class="swiper-slide dish-card">
-                        <img src="img/plato 2.jpg" alt="Plato 2" class="dish-image">
-                        <h3 class="dish-title">Plato 2</h3>
-                        <p class="dish-description">Descripciones del plato.</p>
-                        <button class="dish-button">Ver Detalles</button>
-                    </div>
-                    <div class="swiper-slide dish-card">
-                        <img src="img/plato 3.jpg" alt="Plato 3" class="dish-image">
-                        <h3 class="dish-title">Plato 3</h3>
-                        <p class="dish-description">Descripciones del plato..</p>
-                        <button class="dish-button">Ver Detalles</button>
-                    </div>
-                </div>
-                <!-- Paginación del carrusel (los puntos indicadores) -->
-                <div class="swiper-pagination dishes-pagination"></div>
-                <!-- Botones de navegación (anterior/siguiente) para el carrusel -->
-                <div class="swiper-button-prev dishes-prev"></div>
-                <div class="swiper-button-next dishes-next"></div>
-            </div>
-        </section>
-
-        <!-- Sección de Galerías / Instalaciones con Carrusel Swiper -->
-        <section class="section-gallery container">
-            <h2 class="section-title">Descubre Nuestras Instalaciones</h2>
-            <!-- Contenedor del Carrusel Swiper -->
-            <div class="swiper gallery-swiper">
-                <div class="swiper-wrapper">
-                    <!-- Cada swiper-slide es una imagen de la galería -->
-                    <div class="swiper-slide gallery-item">
-                        <img src="img/restaurante 1.jpg" alt="Interior del restaurante 1" class="gallery-image">
-                        <div class="gallery-caption">Ambiente acogedor y diseño moderno para tu confort.</div>
-                    </div>
-                    <div class="swiper-slide gallery-item">
-                        <img src="img/restaurante 2.jpg" alt="Terraza del restaurante 2" class="gallery-image">
-                        <div class="gallery-caption">Disfruta al aire libre en nuestra espaciosa terraza.</div>
-                    </div>
-                    <div class="swiper-slide gallery-item">
-                        <img src="img/restaurante 3.jpg" alt="Zona de barra 4" class="gallery-image">
-                        <div class="gallery-caption">Nuestra barra, ideal para cócteles.</div>
-                    </div>
-                </div>
-                <!-- Paginación del carrusel -->
-                <div class="swiper-pagination gallery-pagination"></div>
-                <!-- Botones de navegación (anterior/siguiente) para el carrusel -->
-                <div class="swiper-button-prev gallery-prev"></div>
-                <div class="swiper-button-next gallery-next"></div>
-            </div>
-        </section>
-
-        <!-- Sección de Carta Interactiva -->
-        <section class="section-interactive-card container">
-            <h2 class="section-title">¡Una Sorpresa Exclusiva Para Ti!</h2>
-            <div class="interactive-card-wrapper">
-                <!-- Estructura de la carta que "voltea" al interactuar -->
-                <div class="interactive-card" id="interactiveCard">
-                    <div class="card-inner">
-                        <div class="card-front">
-                            <h3 class="card-title">Descubre Nuestra Promoción Especial</h3>
-                            <p class="card-text">Pasa el ratón sobre la tarjeta (o toca en móvil) para revelar una sorpresa.</p>
-                            <span class="card-hint">¡No te lo pierdas!</span>
-                        </div>
-                        <div class="card-back">
-                            <h3 class="card-title">¡15% de Descuento en tu próxima visita!</h3>
-                            <p class="card-text">Válido al presentar este código al personal: <span class="promo-code">LAFAMILIA2025</span></p>
-                            <small class="card-fine-print">*Válido por tiempo limitado. Consulta condiciones en el restaurante.</small>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
-    </main>
-
-    <!-- Pie de Página Principal -->
-    <footer class="main-footer">
-        <div class="footer-content container">
-            <p>&copy; 2025 Restaurante La Familia. Todos los derechos reservados.</p>
-            <div class="social-links">
-                <!-- Enlaces de redes sociales (se pueden reemplazar con íconos o texto) -->
-                <a href="#" aria-label="Facebook del Restaurante">Facebook</a>
-                <a href="#" aria-label="Instagram del Restaurante">Instagram</a>
-                <a href="#" aria-label="Twitter del Restaurante">Twitter</a>
-            </div>
+        <div class="swiper-pagination"></div>
+      </div>
+    </section>
+  
+    <section class="carrusel-section">
+      <h2>Nuestras Instalaciones</h2>
+      <div class="swiper instalacionesSwiper">
+        <div class="swiper-wrapper">
+          <div class="swiper-slide"><img src="/img/restaurante 1.jpg" alt="Instalación 1"></div>
+          <div class="swiper-slide"><img src="/img/restaurante 2.jpg" alt="Instalación 2"></div>
+          <div class="swiper-slide"><img src="/img/restaurante 3.jpg" alt="Instalación 3"></div>
         </div>
-    </footer>
+        <div class="swiper-pagination"></div>
+      </div>
+    </section>  
+  </main>
 
-    <!-- Script para el widget de Google Translate-->
-    <script type="text/javascript">
-        function googleTranslateElementInit() {
-            new google.translate.TranslateElement({
-                pageLanguage: 'es',
-                includedLanguages: 'es,ca,en,zh-CN',
-                layout: google.translate.TranslateElement.InlineLayout.SIMPLE
-            }, 'google_translate_element');
-        }
-    </script>
-    <script type="text/javascript" src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
+  <!-- Footer -->
+  <footer>
+    <section>
+      <h3>Ubicación</h3>
+      <p>C/ de Padilla, 223, Eixample, 08013 Barcelona.</p>
+    </section>
+    <p>©2025 Bar restaurant La Familia. Todos los derechos reservados.</p>
+  </footer>
 
-    <!-- Script de Swiper JS (DEBE IR ANTES DE TU SCRIPT PERSONAL) -->
-    <script src="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.js"></script>
+  <!-- Cargar el widget oficial de Google Translate -->
+  <script type="text/javascript">
+    function googleTranslateElementInit() {
+      new google.translate.TranslateElement({
+        pageLanguage: 'es', // idioma original de tu web
+        includedLanguages: 'es,ca,en,zh-CN', // idiomas disponibles
+        layout: google.translate.TranslateElement.InlineLayout.SIMPLE
+      }, 'google_translate_element');
+    }
+  </script>
+  <script type="text/javascript" src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
+  <!-- Swiper CSS -->
+  <link
+    rel="stylesheet"
+    href="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.css"
+  />
 
-    <!-- TODO EL JAVASCRIPT PERSONAL DE LA PÁGINA VA AQUÍ -->
-    <script>
-        /**
-         * Archivo principal de JavaScript para Restaurante La Familia.
-         * Este script maneja la interactividad general de todas las páginas,
-         * incluyendo el menú móvil, carruseles y lógica específica por página.
-         */
+  <!-- Swiper JS -->
+  <script src="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.js"></script>
 
-        // Asegúrate de que todo el script se ejecute una vez que el DOM esté completamente cargado.
-        document.addEventListener('DOMContentLoaded', function () {
+  <script>
+    // Función para abrir/cerrar menú hamburguesa
+    function toggleMenu() {
+      const menu = document.querySelector('nav.menu');
+      menu.classList.toggle('menu-open');
+    }
 
-            // ======================================================
-            // 1. Menú Móvil (Botón de Hamburguesa)
-            // ======================================================
-            const menuToggle = document.getElementById('menu-toggle');
-            const mainNav = document.getElementById('main-nav');
+    // Cerrar menú al hacer click en un enlace (útil en móvil)
+    function closeMenuOnLinkClick() {
+      const menu = document.querySelector('nav.menu');
+      if (menu.classList.contains('menu-open')) {
+        menu.classList.remove('menu-open');
+      }
+    }
 
-            if (menuToggle && mainNav) {
-                // Alternar la clase 'active' para mostrar/ocultar el menú
-                menuToggle.addEventListener('click', function () {
-                    mainNav.classList.toggle('active');
-                    menuToggle.classList.toggle('active'); // Para animar el icono de hamburguesa (ej: rotación, desvanecimiento de barra central)
-                    const isExpanded = menuToggle.getAttribute('aria-expanded') === 'true';
-                    menuToggle.setAttribute('aria-expanded', !isExpanded); // Accesibilidad
-                });
+    // Añadir evento a enlaces del menú para cerrar menú
+    document.querySelectorAll('nav.menu a').forEach(link => {
+      link.addEventListener('click', closeMenuOnLinkClick);
+    });
 
-                // Cerrar el menú al hacer clic en un enlace (para dispositivos móviles)
-                const navLinks = mainNav.querySelectorAll('.nav-link');
-                navLinks.forEach(link => {
-                    link.addEventListener('click', () => {
-                        if (mainNav.classList.contains('active')) {
-                            mainNav.classList.remove('active');
-                            menuToggle.classList.remove('active');
-                            menuToggle.setAttribute('aria-expanded', 'false');
-                        }
-                    });
-                });
+    // Inicialización de Swiper para Platos Populares
+    const platosSwiper = new Swiper('.platosSwiper', {
+      loop: true,
+      pagination: {
+        el: '.platosSwiper .swiper-pagination',
+        clickable: true,
+      },
+      slidesPerView: 1,
+      spaceBetween: 10,
+      autoplay: {
+        delay: 3000,
+        disableOnInteraction: false,
+      },
+    });
 
-                // Opcional: Cerrar el menú si se hace clic fuera de él (en móviles)
-                document.addEventListener('click', function(event) {
-                    // Si el clic no fue dentro del menú ni en el botón de toggle, y el menú está activo
-                    if (!mainNav.contains(event.target) && !menuToggle.contains(event.target) && mainNav.classList.contains('active')) {
-                        mainNav.classList.remove('active');
-                        menuToggle.classList.remove('active');
-                        menuToggle.setAttribute('aria-expanded', 'false');
-                    }
-                });
-            }
+    // Inicialización de Swiper para Instalaciones
+    const instalacionesSwiper = new Swiper('.instalacionesSwiper', {
+      loop: true,
+      pagination: {
+        el: '.instalacionesSwiper .swiper-pagination',
+        clickable: true,
+      },
+      slidesPerView: 1,
+      spaceBetween: 10,
+      autoplay: {
+        delay: 4000,
+        disableOnInteraction: false,
+      },
+    });
+    let lastScrollTop = 0;
+const header = document.querySelector('header');
 
-            // ======================================================
-            // 2. Inicialización de Carruseles Swiper
-            // ======================================================
+window.addEventListener('scroll', () => {
+  let scrollTop = window.pageYOffset || document.documentElement.scrollTop;
+  if (scrollTop > lastScrollTop && scrollTop > 100) {
+    // Scroll hacia abajo, ocultar header
+    header.classList.add('oculto');
+  } else {
+    // Scroll hacia arriba, mostrar header
+    header.classList.remove('oculto');
+  }
+  lastScrollTop = scrollTop <= 0 ? 0 : scrollTop; // Para evitar valores negativos
+});
 
-            // Inicialización del Swiper para Platos Populares
-            // Verifica si el elemento existe antes de intentar inicializarlo
-            const dishesSwiperElement = document.querySelector('.dishes-swiper');
-            if (dishesSwiperElement) {
-                const dishesSwiper = new Swiper(dishesSwiperElement, {
-                    slidesPerView: 1, // Muestra 1 slide en móvil por defecto
-                    spaceBetween: 20, // Espacio entre slides
-                    loop: true, // Habilita el bucle infinito
-                    grabCursor: true, // Cambia el cursor a una mano cuando se puede arrastrar
+  </script>
 
-                    // Paginación (los puntos inferiores)
-                    pagination: {
-                        el: '.dishes-pagination',
-                        clickable: true, // Permite hacer clic en los puntos para ir a un slide específico
-                    },
-
-                    // Navegación (flechas de anterior/siguiente)
-                    navigation: {
-                        nextEl: '.dishes-next',
-                        prevEl: '.dishes-prev',
-                    },
-
-                    // Puntos de ruptura para el diseño responsive
-                    breakpoints: {
-                        // Cuando la ventana tiene al menos 768px de ancho
-                        768: {
-                            slidesPerView: 2,
-                            spaceBetween: 30,
-                        },
-                        // Cuando la ventana tiene al menos 1024px de ancho
-                        1024: {
-                            slidesPerView: 3,
-                            spaceBetween: 40,
-                        }
-                    },
-                });
-            }
-
-
-            // Inicialización del Swiper para la Galería de Instalaciones
-            // Verifica si el elemento existe antes de intentar inicializarlo
-            const gallerySwiperElement = document.querySelector('.gallery-swiper');
-            if (gallerySwiperElement) {
-                const gallerySwiper = new Swiper(gallerySwiperElement, {
-                    slidesPerView: 1,
-                    spaceBetween: 20,
-                    loop: true,
-                    grabCursor: true,
-
-                    // Paginación
-                    pagination: {
-                        el: '.gallery-pagination',
-                        clickable: true,
-                    },
-
-                    // Navegación
-                    navigation: {
-                        nextEl: '.gallery-next',
-                        prevEl: '.gallery-prev',
-                    },
-
-                    // Puntos de ruptura para el diseño responsive (generalmente se mantiene 1 slide grande para galerías visuales)
-                    breakpoints: {
-                        768: {
-                            slidesPerView: 1,
-                            spaceBetween: 30,
-                        },
-                        1024: {
-                            slidesPerView: 1,
-                            spaceBetween: 40,
-                        }
-                    },
-
-                    // Efecto de transición (ej. 'fade' para una galería de imágenes se ve muy bien)
-                    effect: 'fade',
-                    fadeEffect: {
-                        crossFade: true,
-                    },
-
-                    // Autoplay para la galería (opcional, para que las imágenes pasen automáticamente)
-                    autoplay: {
-                        delay: 4000, // Cambia cada 4 segundos
-                        disableOnInteraction: false, // El autoplay no se detiene si el usuario interactúa manualmente
-                    },
-                });
-            }
-
-            // Inicialización del Swiper para Atracciones (si aplica a 'donde-encontrarnos.html')
-            const attractionsSwiperElement = document.querySelector('.attractions-swiper');
-            if (attractionsSwiperElement) {
-                const attractionsSwiper = new Swiper(attractionsSwiperElement, {
-                    slidesPerView: 1,
-                    spaceBetween: 20,
-                    loop: true,
-                    grabCursor: true,
-                    pagination: {
-                        el: '.attractions-pagination',
-                        clickable: true,
-                    },
-                    navigation: {
-                        nextEl: '.attractions-next',
-                        prevEl: '.attractions-prev',
-                    },
-                    breakpoints: {
-                        768: {
-                            slidesPerView: 2,
-                            spaceBetween: 30,
-                        },
-                        1024: {
-                            slidesPerView: 3,
-                            spaceBetween: 40,
-                        }
-                    }
-                });
-            }
-
-
-            // ======================================================
-            // 3. Lógica para el botón "Explora Nuestro Carta" (Hero Section)
-            // ======================================================
-            const heroButton = document.querySelector('.hero-button');
-            if (heroButton) {
-                heroButton.addEventListener('click', function() {
-                    // Redirige a la página de la carta
-                    window.location.href = './pages/carta.html';
-                });
-            }
-
-            // ======================================================
-            // 4. Lógica para la Tarjeta Interactiva (index.html)
-            // ======================================================
-            const interactiveCard = document.getElementById('interactiveCard');
-            if (interactiveCard) {
-                // Evento para cuando el ratón entra en la tarjeta (para escritorio)
-                interactiveCard.addEventListener('mouseenter', () => {
-                    interactiveCard.classList.add('flipped');
-                });
-                // Evento para cuando el ratón sale de la tarjeta (para escritorio)
-                interactiveCard.addEventListener('mouseleave', () => {
-                    interactiveCard.classList.remove('flipped');
-                });
-                // Evento de clic/toque para dispositivos táctiles (y también funciona en escritorio)
-                interactiveCard.addEventListener('click', () => {
-                    interactiveCard.classList.toggle('flipped');
-                });
-            }
-
-            // ======================================================
-            // 5. Filtro de Categorías en carta.html
-            // ======================================================
-            const filterButtonsWrapper = document.querySelector('.filter-buttons-wrapper');
-            const menuCategorySections = document.querySelectorAll('.menu-category-section');
-
-            if (filterButtonsWrapper && menuCategorySections.length > 0) {
-                const filterButtons = filterButtonsWrapper.querySelectorAll('.filter-button');
-
-                filterButtons.forEach(button => {
-                    button.addEventListener('click', function () {
-                        // Elimina la clase 'active' de todos los botones
-                        filterButtons.forEach(btn => btn.classList.remove('active'));
-                        // Añade la clase 'active' al botón clickeado
-                        this.classList.add('active');
-
-                        const categoryToShow = this.dataset.category; // Obtiene la categoría del botón
-
-                        // Itera sobre todas las secciones de menú
-                        menuCategorySections.forEach(section => {
-                            const sectionCategory = section.dataset.category; // Obtiene la categoría de la sección
-                            // Muestra u oculta la sección según la categoría seleccionada
-                            section.style.display = (categoryToShow === 'all' || sectionCategory === categoryToShow)
-                                ? 'block'
-                                : 'none';
-                        });
-                    });
-                });
-                // Asegurarse de que al cargar la página, se muestre la categoría "all" o la primera activa
-                const initialActiveButton = filterButtonsWrapper.querySelector('.filter-button.active');
-                if (initialActiveButton) {
-                    initialActiveButton.click(); // Simula un click en el botón activo inicial
-                } else if (filterButtons.length > 0) {
-                    filterButtons[0].click(); // Si no hay activo, clickea el primero (generalmente 'all')
-                }
-            }
-
-
-            // ======================================================
-            // 6. Scroll suave a mapa (en donde-encontrarnos.html)
-            // ======================================================
-            const scrollToMapButton = document.querySelector('.scroll-to-map');
-            if (scrollToMapButton) {
-                scrollToMapButton.addEventListener('click', function (e) {
-                    e.preventDefault(); // Evita el comportamiento de anclaje por defecto
-                    // Desplazamiento suave al elemento destino
-                    document.querySelector(this.getAttribute('href')).scrollIntoView({
-                        behavior: 'smooth'
-                    });
-                });
-            }
-
-        }); // Fin de DOMContentLoaded
-    </script>
 </body>
+</html>
