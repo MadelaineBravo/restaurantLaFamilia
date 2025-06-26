@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<title>Restaurante "La Familia" Carta</title>
+<link rel="stylesheet" href="../CSS/style.css">
+</head>
+<body>
+<header>
+    <div class="header-container">
+    <!-- Menú hamburguesa -->
+    <div class="menu-toggle" onclick="toggleMenu()">☰</div>
+
+    <!-- Logo -->
+    <div class="logo">
+        <img src="img/logo.jpg" alt="La Familia" />
+    </div>
+
+    <div>
+        <div class="selector-idioma" id="google_translate_element"></div>
+    </div>
+    <!-- Navegación (inicialmente oculta en móvil) -->
+    <nav class="menu">
+    <a href="./index.html">Inicio</a>
+    <a href=".///pages/Menu/Carta/iniciomenu.html">Menú</a>
+    <a href=".//pages/donde-encontrarnos.html">Dónde encontrarnos</a>
+    </nav>
+</header>
+<main>
+<section id="carta">
+    <h2>Nuestra Carta</h2>
+
+    <div class="sub-menu">
+    <button onclick="mostrarSeccion('tapas')" id="btn-tapas" class="active">Tapas</button>
+    <button onclick="mostrarSeccion('bebidas')" id="btn-bebidas">Bebidas</button>
+    <button onclick="mostrarSeccion('bocadillos')" id="btn-bocadillos">Bocadillos</button>
+    </div>
+
+    <div id="tapas" class="subcarta activa">
+    <h3>Tapas</h3>
+    <ul>
+        <li>Patatas bravas - 4€</li>
+        <li>Calamares a la romana - 6€</li>
+        <li>Pan con tomate - 2€</li>
+    </ul>
+    </div>
+
+    <div id="bebidas" class="subcarta">
+    <h3>Bebidas</h3>
+    <ul>
+        <li>Agua mineral - 1,50€</li>
+        <li>Refrescos - 2€</li>
+        <li>Cerveza - 2,50€</li>
+    </ul>
+    </div>
+
+    <div id="bocadillos" class="subcarta">
+    <h3>Bocadillos</h3>
+    <ul>
+        <li>Bocadillo de jamón - 4€</li>
+        <li>Vegetal con atún - 4,50€</li>
+        <li>Bikini - 3,50€</li>
+    </ul>
+    </div>
+</section>
+</main>
+<script src="./JS/app.js"></script>
+<script type="text/javascript">
+    function googleTranslateElementInit() {
+    new google.translate.TranslateElement({
+        pageLanguage: 'es', // idioma original de tu web
+        includedLanguages: 'es,ca,en,zh-CN', // idiomas disponibles
+        layout: google.translate.TranslateElement.InlineLayout.SIMPLE
+    }, 'google_translate_element');
+    }
+</script>
+<script type="text/javascript" src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
+
+<footer class="footer">
+    <div class="footer-container">
+    <div class="footer-section">
+        <h3>La Familia</h3>
+        <p>Bar restaurantE.<br>Desde 2020 en el corazón de Barcelona.</p>
+    </div>
+    <div class="footer-section">
+        <h4>Dirección</h4>
+        <p>C/ de Padilla, 223<br>Eixample, 08013 Barcelona</p>
+    </div>
+    </div>
+    <div class="footer-bottom">
+    <p>© 2025 Bar Restaurante La Familia. Todos los derechos reservados.</p>
+    </div>
+</footer>
+</body>
+</html>
