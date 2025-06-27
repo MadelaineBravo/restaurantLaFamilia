@@ -108,6 +108,7 @@ nav.menu a:hover {
     color: white;
     font-size: 0.9rem;
 }
+
 /* Sección principal */
 main {
     max-width: 1200px;
@@ -146,7 +147,6 @@ main {
     transform: scale(1.1);
 }
 
-
 /* Footer */
 footer {
     background-color: var(--color-secondary);
@@ -177,10 +177,10 @@ footer p {
     align-items: center;
     justify-content: center;
     text-align: center;
-  }
-  
-  /* Video a pantalla completa */
-  .video-portada {
+}
+
+/* Video a pantalla completa */
+.video-portada {
     position: absolute;
     top: 0;
     left: 0;
@@ -188,10 +188,10 @@ footer p {
     height: 100%;
     object-fit: cover;
     z-index: -1;
-  }
-  
-  /* Texto centrado, glow, animación y tipografía china */
-  .portada-texto h1 {
+}
+
+/* Texto centrado, glow, animación y tipografía china */
+.portada-texto h1 {
     font-family: 'Ma Shan Zheng', cursive;
     font-size: 5rem;
     font-weight: 300;
@@ -202,10 +202,10 @@ footer p {
       0 0 8px rgba(26, 21, 21, 0.6),
       0 0 20px rgba(14, 13, 13, 0.5),
       2px 2px 6px rgba(0, 0, 0, 0.9); /* sombra negra suave */
-  }
-  
-  /* Animación de entrada */
-  @keyframes fadeInSlide {
+}
+
+/* Animación de entrada */
+@keyframes fadeInSlide {
     0% {
       opacity: 0;
       transform: translateY(30px);
@@ -214,20 +214,8 @@ footer p {
       opacity: 1;
       transform: translateY(0);
     }
-  }
-  
-  /* RESPONSIVE para móvil */
-  @media (max-width: 768px) {
-    .portada-texto h1 {
-      font-size: 2.2rem;
-      padding: 0 1rem;
-    }
-  
-    .video-portada {
-      object-fit: cover;
-    }
-  }
-  
+}
+
 /* --- CONTENIDO PRINCIPAL --- */
 .principal-contenido {
     max-width: 900px;
@@ -285,7 +273,8 @@ footer p {
 
 .categoria ul {
     list-style: none;
-    font-family: 'Noto Serif', serif; }
+    font-family: 'Noto Serif', serif; 
+}
 
 .categoria ul li {
     display: flex;
@@ -346,19 +335,26 @@ footer p {
     background-color: #a71d2a;
 }
 
-/* --- RESPONSIVE --- */
+/* === RESPONSIVE GLOBAL PARA MÓVILES === */
 @media (max-width: 768px) {
+    .header-container {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+
     .menu-toggle {
         display: block;
     }
 
     nav.menu {
+        flex-direction: column;
+        width: 100%;
+        align-items: center;
         position: fixed;
         top: 60px;
-        left: 0; /* menú deslizado centrado */
-        width: 100%; /* ancho completo en móvil */
+        left: 0;
         background-color: var(--color-primary);
-        flex-direction: column;
         padding: 1rem 0;
         transform: translateY(-100%);
         transition: transform 0.3s ease-in-out;
@@ -381,23 +377,51 @@ footer p {
         border-bottom: 1px solid rgba(255,255,255,0.2);
         text-align: center;
         font-weight: 200;
-        font-size: xx-large;
-        font-family: 'Ma Shan Zheng', cursive;    }
-
-    /* Logo más pequeño en móvil */
-    .logo img {
-        height: 40px;
+        font-family: 'Ma Shan Zheng', cursive;
     }
 
-    /* Google Translate más pequeño */
+    .logo img {
+        height: 50px;
+        margin-bottom: 0.5rem;
+    }
+
     #google_translate_element {
         font-size: 0.8rem;
     }
 
-    /* Carta y filtro mejor adaptados */
+    .portada {
+        height: 70vh;
+    }
+
+    .portada-texto h1 {
+        font-size: 2.2rem;
+        padding: 0 1rem;
+    }
+
+    .swiper-slide img {
+        height: 200px;
+    }
+
+    .intro h2 {
+        font-size: 1.8rem;
+    }
+
+    .intro p {
+        font-size: 1rem;
+    }
+
+    .btn-carta {
+        width: 90%;
+        font-size: 1rem;
+    }
+
     .carta-section {
-        margin: 90px 1rem 50px;
-        padding: 0 0.5rem;
+        padding: 0 1rem;
+    }
+
+    .principal-contenido {
+        padding: 0 1rem;
+        font-size: 1rem;
     }
 
     .categoria ul li {
@@ -412,6 +436,13 @@ footer p {
     .categoria ul li .precio {
         min-width: auto;
         margin-top: 6px;
+    }
+
+    /* Evitar overflow horizontal en textos */
+    .categoria ul li h3,
+    .categoria ul li p,
+    .categoria ul li .precio {
+        word-wrap: break-word;
     }
 }
 
@@ -434,52 +465,16 @@ footer p {
         height: 300px;
     }
 }
-@media (max-width: 768px) {
-    .portada-texto h1 {
-      font-size: 2rem;
-      padding: 0 1rem;
-    }
-  
-    .portada {
-      height: 50vh;
-    }
-  
-    /* Carta: margenes más estrechos y mejor espaciado */
-    .carta-section {
-      margin: 90px 1rem 50px;
-      padding: 0 1rem;
-    }
-  
-    .categoria ul li {
-      flex-direction: column;
-      align-items: flex-start;
-    }
-  
-    .categoria ul li p {
-      margin: 0.3rem 0 0 0;
-    }
-  
-    .categoria ul li .precio {
-      min-width: auto;
-      margin-top: 6px;
-    }
-    
-    /* Asegurar que los textos no se desbordan */
-    .categoria ul li h3,
-    .categoria ul li p,
-    .categoria ul li .precio {
-      word-wrap: break-word;
-    }
-  }
-  /* === PORTADA PARA LA CARTA === */
-  .portada-img {
+
+/* === PORTADA PARA LA CARTA === */
+.portada-img {
     position: relative;
     width: 100%;
     height: 100vh;
     overflow: hidden;
-  }
-  
-  .img-portada-fondo {
+}
+
+.img-portada-fondo {
     position: absolute;
     top: 0;
     left: 0;
@@ -487,9 +482,9 @@ footer p {
     height: 100%;
     object-fit: cover;
     z-index: 1;
-  }
-  
-  .portada-texto {
+}
+
+.portada-texto {
     position: relative;
     z-index: 2;
     height: 100%;
@@ -497,18 +492,18 @@ footer p {
     align-items: center;
     justify-content: center;
     text-align: center;
-  }
-  
-  .portada-texto h1 {
+}
+
+.portada-texto h1 {
     font-size: 3.5rem;
     color: white;
     text-shadow: 2px 2px 8px rgba(0,0,0,0.8);
     animation: fadeInUp 1s ease-out both;
     padding: 0 1rem;
-  }
-  
-  /* Animación de entrada */
-  @keyframes fadeInUp {
+}
+
+/* Animación de entrada */
+@keyframes fadeInUp {
     0% {
       opacity: 0;
       transform: translateY(30px);
@@ -518,33 +513,34 @@ footer p {
       transform: translateY(0);
     }
 }
+
 /* ==== INTRODUCCIÓN + BOTÓN CARTA ==== */
 .intro {
     background-color: var(--color-bg);
     padding: 3rem 1rem;
     text-align: center;
-  }
-  
-  .intro-contenido {
+}
+
+.intro-contenido {
     max-width: 800px;
     margin: 0 auto;
-  }
-  
-  .intro h2 {
+}
+
+.intro h2 {
     font-size: 2.2rem;
     color: var(--color-secondary);
     margin-bottom: 1rem;
     font-weight: 700;
-  }
-  
-  .intro p {
+}
+
+.intro p {
     font-size: 1.1rem;
     color: var(--color-text);
     margin-bottom: 2rem;
     line-height: 1.6;
-  }
-  
-  .btn-carta {
+}
+
+.btn-carta {
     background-color: var(--color-primary);
     color: white;
     padding: 1rem 2rem;
@@ -553,47 +549,48 @@ footer p {
     border-radius: 50px;
     transition: background-color 0.3s ease, transform 0.2s ease;
     box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
-  }
-  
-  .btn-carta:hover {
+}
+
+.btn-carta:hover {
     background-color: var(--color-accent);
     color: var(--color-text);
     transform: scale(1.05);
-  }
-  .turismo-grid {
+}
+
+/* Turismo grid */
+.turismo-grid {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
     gap: 2rem;
     margin-top: 1.5rem;
-  }
-  
-  .turismo-item {
+}
+
+.turismo-item {
     background-color: #fff;
     border-radius: 10px;
     box-shadow: 0 4px 15px rgba(0,0,0,0.1);
     overflow: hidden;
     transition: transform 0.3s ease;
-  }
-  
-  .turismo-item:hover {
+}
+
+.turismo-item:hover {
     transform: translateY(-5px);
-  }
-  
-  .turismo-item img {
+}
+
+.turismo-item img {
     width: 100%;
     height: 160px;
     object-fit: cover;
-  }
-  
-  .turismo-item h3 {
+}
+
+.turismo-item h3 {
     margin: 0.8rem 1rem 0.5rem;
     color: var(--color-primary);
     font-size: 1.2rem;
-  }
-  
-  .turismo-item p {
+}
+
+.turismo-item p {
     margin: 0 1rem 1rem;
     font-size: 0.95rem;
     color: #444;
-  }
-  
+}
