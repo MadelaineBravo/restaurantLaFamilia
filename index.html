@@ -4,10 +4,15 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
     <title>Restaurante "La Familia"</title>
+    <meta name="description" content="Restaurante familiar con cocina española y china en el corazón de Barcelona. Platos caseros, ambiente acogedor y atención personalizada.">
+    <meta name="keywords" content="restaurante, bar, barcelona, sagrada familia, Padilla, terraza, bocadillos, comida china, asiática, para llevar , tapas, La Familia">
+    <meta name="Madelaine Bravo" content="Restaurante La Familia">
+    <link rel="icon" href="img/La_Familia_Logo-Photoroom.png" type="image/png">
     <link rel="stylesheet" href="./CSS/style.css">
     <!-- Swiper CSS -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.css"/>
-    </head>
+    <link href="https://fonts.googleapis.com/css2?family=Ma+Shan+Zheng&display=swap" rel="stylesheet">
+</head>
     <body>
 
     <header>
@@ -17,7 +22,7 @@
 
         <!-- Logo -->
         <div class="logo">
-        <img src="img/logo.jpg" alt="La Familia" />
+        <img src="img/La_Familia_Logo-Photoroom.png" alt="La Familia" />
         </div>
 
         <div>
@@ -27,43 +32,49 @@
         <!-- Navegación -->
         <nav class="menu">
         <a href="./index.html">Inicio</a>
-        <a href="./pages/Menu/">Menú</a>
+        <a href="./pages/carta.html">Menú</a>
         <a href="./pages/donde-encontrarnos.html">Dónde encontrarnos</a>
         </nav>
     </div>
     </header>
-
-    <main>
     <section class="portada">
+        <video autoplay muted loop playsinline class="video-portada">
+            <source src="img/VIDEOPORTADA.mp4" type="video/mp4">
+        </video>
         <div class="portada-texto">
-        <h1>Bienvenidos a nuestro restaurante</h1>
+          <h1>“Cocina creativa, elaborado con pasión”</h1>
         </div>
-    </section>
-
-    <section class="carrusel-section">
-        <h2>Platos Populares</h2>
-        <div class="swiper platosSwiper">
-        <div class="swiper-wrapper">
-            <div class="swiper-slide"><img src="img/plato 1.jpg" alt="Plato 1"></div>
-            <div class="swiper-slide"><img src="img/plato 2.jpg" alt="Plato 2"></div>
-            <div class="swiper-slide"><img src="img/plato 3.jpg" alt="Plato 3"></div>
-        </div>
-        <div class="swiper-pagination"></div>
-        </div>
-    </section>
-
-    <section class="carrusel-section">
-        <h2>Nuestras Instalaciones</h2>
-        <div class="swiper instalacionesSwiper">
-        <div class="swiper-wrapper">
-            <div class="swiper-slide"><img src="img/restaurante 1.jpg" alt="Instalación 1"></div>
-            <div class="swiper-slide"><img src="img/restaurante 2.jpg" alt="Instalación 2"></div>
-            <div class="swiper-slide"><img src="img/restaurante 3.jpg" alt="Instalación 3"></div>
-        </div>
-        <div class="swiper-pagination"></div>
-        </div>
-    </section>  
-    </main>
+      </section>
+    <main>
+        <section class="intro">
+            <div class="intro-contenido">
+              <h2>Una experiencia familiar</h2>
+              <p>
+                En <strong>La Familia</strong>, te invitamos a disfrutar de una cocina casera con sabores auténticos y un ambiente acogedor en el corazón de Barcelona. Ven a compartir momentos inolvidables con nosotros.
+              </p>
+              <a href="./pages/carta.html" class="btn-carta">Conoce nuestra carta</a>
+            </div>
+          </section>
+          
+          <section class="carrusel-section">
+            <h2>Nuestras Instalaciones</h2>
+            <div class="swiper instalacionesSwiper">
+              <div class="swiper-wrapper">
+                <div class="swiper-slide"><img src="img/barra.jpeg" alt="Instalación 1"></div>
+                <div class="swiper-slide"><img src="img/entrada.jpeg" alt="Instalación 2"></div>
+                <div class="swiper-slide"><img src="img/terraza.jpeg" alt="Instalación 3"></div>
+                <div class="swiper-slide"><img src="img/salarestaurant.jpeg" alt="Instalación 3"></div>
+                <div class="swiper-slide"><img src="img/pasillorestaurant.jpeg" alt="Instalación 3"></div>
+                <div class="swiper-slide"><img src="img/maquinas.jpeg" alt="Instalación 3"></div>
+              </div>
+              <div class="swiper-pagination"></div>
+            </div>
+          
+            <p style="text-align: center; margin-top: 1rem; font-size: 1.1rem; color: #444;">
+              Nuestro espacio está diseñado para que te sientas como en casa. Ambientes cómodos, detalles acogedores y una decoración que mezcla tradición y modernidad para hacer de tu visita una experiencia agradable y comoda.
+            </p>
+          </section>
+          
 
     <footer class="footer">
     <div class="footer-container">

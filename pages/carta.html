@@ -4,30 +4,55 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
     <title>Carta - Restaurante La Familia</title>
+    <meta name="description" content="Restaurante familiar con cocina española y china en el corazón de Barcelona. Platos caseros, ambiente acogedor y atención personalizada.">
+    <meta name="keywords" content="restaurante, bar, barcelona, sagrada familia, Padilla, terraza, bocadillos, comida china, asiática, para llevar , tapas, La Familia">
+    <meta name="Madelaine Bravo" content="Restaurante La Familia">
+    <link rel="icon" href="../img/La_Familia_Logo-Photoroom.png" type="image/png">
     <link rel="stylesheet" href="../CSS/style.css" />
+    <link href="https://fonts.googleapis.com/css2?family=Ma+Shan+Zheng&display=swap" rel="stylesheet">
     <style>
-    /* Estilos para el filtro */
-    .filtro-categorias {
-        text-align: center;
-        margin-bottom: 20px;
-    }
+.filtro-categorias {
+  display: flex;
+  overflow-x: auto;
+  gap: 12px;
+  padding: 1rem;
+  margin-bottom: 30px;
+  scroll-snap-type: x mandatory;
+  -webkit-overflow-scrolling: touch;
+}
 
-    .filtro-btn {
-        cursor: pointer;
-        background-color: #D72638;
-        color: white;
-        border: none;
-        margin: 0 8px;
-        padding: 8px 18px;
-        border-radius: 5px;
-        font-weight: 600;
-        transition: background-color 0.3s ease;
-    }
+.filtro-btn {
+  flex: 0 0 auto;
+  scroll-snap-align: start;
+  font-family: 'Ma Shan Zheng', cursive;
+  font-size: 1.4rem;
+  font-weight:300;
+  background-color: #D72638;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  padding: 10px 16px;
+  white-space: nowrap;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+}
 
-    .filtro-btn:hover,
-    .filtro-btn.active {
-        background-color: #a71d2a;
-    }
+.filtro-btn:hover,
+.filtro-btn.active {
+  background-color: #a71d2a;
+  transform: translateY(-2px);
+  box-shadow: 0 6px 12px rgba(0,0,0,0.2);
+}
+
+/* En pantallas grandes, centrar y limitar el ancho */
+@media (min-width: 768px) {
+  .filtro-categorias {
+    justify-content: center;
+    flex-wrap: wrap;
+    overflow: visible;
+  }
+}
+
     </style>
     </head>
     <body>
@@ -35,95 +60,119 @@
     <header>
         <div class="header-container">
         <div class="menu-toggle" onclick="toggleMenu()">☰</div>
-        <div class="logo">
-            <img src="../img/logo.jpg" alt="La Familia" />
-        </div>
         <div id="google_translate_element"></div>
         </div>
-
         <nav class="menu">
         <a href="../index.html">Inicio</a>
         <a href="carta.html" class="active">Menú</a>
         <a href="donde-encontrarnos.html">Dónde encontrarnos</a>
         </nav>
+
     </header>
+    <section class="portada-img">
+        <img src="../img/barra.jpeg" alt="Imagen de portada de la carta" class="img-portada-fondo">
+        <div class="portada-texto">
+            <h1>Descubre Nuestra Carta</h1>           
+        </div>
+    </section>
+
+<!-- Sustituye esta sección dentro de tu <main> por esta nueva versión actualizada -->
 
     <main>
         <section class="carta-section">
-
-        <div class="filtro-categorias">
-        <button class="filtro-btn active" data-categoria="todos">Todos</button>
-        <button class="filtro-btn" data-categoria="entrantes">Entrantes</button>
-        <button class="filtro-btn" data-categoria="platos-principales">Platos Principales</button>
-        <button class="filtro-btn" data-categoria="postres">Postres</button>
-        <button class="filtro-btn" data-categoria="bebidas">Bebidas</button>
-        </div>
-
-        <h1>Nuestra Carta</h1>
-
-        <article class="categoria" data-categoria="entrantes">
-            <h2>Entrantes</h2>
+          <div class="filtro-categorias">
+            <button class="filtro-btn active" data-categoria="todos">Todos</button>
+            <button class="filtro-btn" data-categoria="entrantes">Entrantes</button>
+            <button class="filtro-btn" data-categoria="platos-principales">Platos Principales</button>
+            <button class="filtro-btn" data-categoria="postres">Postres</button>
+            <button class="filtro-btn" data-categoria="bebidas">Bebidas</button>
+            <button class="filtro-btn" data-categoria="cocteles">Cócteles</button>
+            <button class="filtro-btn" data-categoria="desayunos">Desayunos</button>
+            <button class="filtro-btn" data-categoria="bocadillos-frios">Bocadillos Fríos</button>
+            <button class="filtro-btn" data-categoria="bocadillos-calientes">Bocadillos Calientes</button>
+            <button class="filtro-btn" data-categoria="asiatica">Comida Asiática</button>
+            <button class="filtro-btn" data-categoria="combinados">Combinados</button>
+            <button class="filtro-btn" data-categoria="pastas-ensaladas">Pastas y Ensaladas</button>
+            <button class="filtro-btn" data-categoria="paellas">Paellas</button>
+            <button class="filtro-btn" data-categoria="china">Comida China</button>
+          </div>
+      
+          <h1>Nuestra Carta</h1>
+      
+          <article class="categoria" data-categoria="desayunos">
+            <h2>Desayunos</h2>
             <ul>
-            <li>
-                <h3>Ensalada Mediterránea</h3>
-                <p>Lechuga, tomate, aceitunas, queso feta y aderezo especial.</p>
-                <span class="precio">5,50 €</span>
-            </li>
-            <li>
-                <h3>Tabla de Quesos</h3>
-                <p>Selección de quesos artesanales con frutos secos.</p>
-                <span class="precio">8,00 €</span>
-            </li>
+              <li><h3>Tostadas con tomate y aceite</h3><p>Pan crujiente con tomate natural y aceite de oliva virgen extra.</p><span class="precio">3,00 €</span></li>
+              <li><h3>Café con croissant</h3><p>Café al gusto acompañado de un croissant recién horneado.</p><span class="precio">3,50 €</span></li>
             </ul>
-        </article>
-
-        <article class="categoria" data-categoria="platos-principales">
-            <h2>Platos Principales</h2>
+          </article>
+      
+          <article class="categoria" data-categoria="bocadillos-frios">
+            <h2>Bocadillos Fríos</h2>
             <ul>
-            <li>
-                <h3>Paella Valenciana</h3>
-                <p>Arroz con mariscos frescos, pollo y verduras.</p>
-                <span class="precio">14,00 €</span>
-            </li>
-            <li>
-                <h3>Solomillo a la Plancha</h3>
-                <p>Solomillo de ternera con salsa de champiñones y guarnición.</p>
-                <span class="precio">18,50 €</span>
-            </li>
+              <li><h3>Bocadillo de jamón serrano</h3><p>Jamón serrano sobre pan de barra con tomate.</p><span class="precio">4,20 €</span></li>
+              <li><h3>Bocadillo vegetal</h3><p>Lechuga, tomate, atún y mayonesa en pan integral.</p><span class="precio">4,00 €</span></li>
             </ul>
-        </article>
-
-        <article class="categoria" data-categoria="postres">
-            <h2>Postres</h2>
+          </article>
+      
+          <article class="categoria" data-categoria="bocadillos-calientes">
+            <h2>Bocadillos Calientes</h2>
             <ul>
-            <li>
-                <h3>Flan Casero</h3>
-                <p>Flan tradicional con caramelo.</p>
-                <span class="precio">4,00 €</span>
-            </li>
-            <li>
-                <h3>Tarta de Queso</h3>
-                <p>Tarta de queso con base de galleta y mermelada de frutos rojos.</p>
-                <span class="precio">4,50 €</span>
-            </li>
+              <li><h3>Bocadillo de lomo con queso</h3><p>Lomo de cerdo a la plancha con queso fundido.</p><span class="precio">4,50 €</span></li>
+              <li><h3>Sándwich mixto</h3><p>Jamón dulce y queso fundido en pan de molde.</p><span class="precio">3,80 €</span></li>
             </ul>
-        </article>
-
-        <article class="categoria" data-categoria="bebidas">
-            <h2>Bebidas</h2>
+          </article>
+      
+          <article class="categoria" data-categoria="cocteles">
+            <h2>Cócteles</h2>
             <ul>
-            <li>
-                <h3>Vino Tinto</h3>
-                <span class="precio">3,00 €</span>
-            </li>
-            <li>
-                <h3>Cerveza Artesanal</h3>
-                <span class="precio">3,50 €</span>
-            </li>
+              <li><h3>Mojito</h3><p>Ron, hierbabuena, lima, azúcar y soda.</p><span class="precio">6,00 €</span></li>
+              <li><h3>Piña Colada</h3><p>Ron, piña natural y crema de coco.</p><span class="precio">6,50 €</span></li>
             </ul>
-        </article>
+          </article>
+      
+          <article class="categoria" data-categoria="asiatica">
+            <h2>Comida Asiática</h2>
+            <ul>
+              <li><h3>Pollo al curry</h3><p>Pollo tierno con salsa de curry suave y arroz blanco.</p><span class="precio">9,50 €</span></li>
+              <li><h3>Ramen de cerdo</h3><p>Caldo sabroso con fideos, huevo, cerdo y verduras.</p><span class="precio">10,00 €</span></li>
+            </ul>
+          </article>
+      
+          <article class="categoria" data-categoria="combinados">
+            <h2>Combinados</h2>
+            <ul>
+              <li><h3>Huevos fritos con patatas y chistorra</h3><p>Plato tradicional completo y sabroso.</p><span class="precio">8,00 €</span></li>
+              <li><h3>Pechuga con arroz y ensalada</h3><p>Plato saludable con proteína y verduras frescas.</p><span class="precio">8,50 €</span></li>
+            </ul>
+          </article>
+      
+          <article class="categoria" data-categoria="pastas-ensaladas">
+            <h2>Pastas y Ensaladas</h2>
+            <ul>
+              <li><h3>Espaguetis boloñesa</h3><p>Pasta al dente con salsa casera de carne.</p><span class="precio">7,50 €</span></li>
+              <li><h3>Ensalada César</h3><p>Lechuga romana, pollo, picatostes y salsa César.</p><span class="precio">6,80 €</span></li>
+            </ul>
+          </article>
+      
+          <article class="categoria" data-categoria="paellas">
+            <h2>Paellas</h2>
+            <ul>
+              <li><h3>Paella de mariscos</h3><p>Con gambas, mejillones, calamares y arroz con azafrán.</p><span class="precio">13,50 €</span></li>
+              <li><h3>Paella mixta</h3><p>Pollo, conejo y mariscos en arroz sabroso.</p><span class="precio">14,00 €</span></li>
+            </ul>
+          </article>
+      
+          <article class="categoria" data-categoria="china">
+            <h2>Comida China</h2>
+            <ul>
+              <li><h3>Arroz tres delicias</h3><p>Arroz salteado con jamón, tortilla y guisantes.</p><span class="precio">5,80 €</span></li>
+              <li><h3>Rollitos de primavera</h3><p>Rellenos de verduras crujientes y salsa agridulce.</p><span class="precio">3,50 €</span></li>
+            </ul>
+          </article>
         </section>
-    </main>
+      </main>
+      
 
     <footer>
         <section>

@@ -4,7 +4,7 @@
     --color-secondary: #003E6B;  /* azul oscuro */
     --color-bg: #F8F6F3;         /* fondo claro */
     --color-text: #2A2A2A;       /* texto oscuro */
-    --color-accent: #DDFA54;     /* amarillo suave */
+    --color-accent: #e1a63e;     /* amarillo suave */
 }
 
 /* RESET básico */
@@ -15,7 +15,7 @@
 }
 
 body {
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-family: 'Noto Serif', serif;
     background-color: var(--color-bg);
     color: var(--color-text);
     line-height: 1.6;
@@ -60,10 +60,11 @@ header.oculto {
 
 /* Logo centrado */
 .logo img {
-    height: 50px;
+    height: 60px;
     display: block;
     margin: 0 auto;
     cursor: pointer;
+    box-shadow: #2A2A2A;
 }
 
 /* Menú de navegación */
@@ -107,27 +108,21 @@ nav.menu a:hover {
     color: white;
     font-size: 0.9rem;
 }
-
 /* Sección principal */
 main {
     max-width: 1200px;
-    margin: 100px auto 40px; /* deja espacio para header fijo */
+    margin: 100px auto 40px; 
     padding: 0 1rem;
 }
 
-/* Secciones de carrusel */
-.carrusel-section {
-    margin-bottom: 50px;
-}
-
 .carrusel-section h2 {
-    margin-bottom: 1rem;
+    text-align: center;
     color: var(--color-secondary);
     font-weight: 700;
-    text-align: center;
+    margin-bottom: 1rem;
 }
 
-/* Swiper: tamaño y estilo */
+/* Swiper */
 .swiper {
     width: 100%;
     max-width: 700px;
@@ -139,9 +134,18 @@ main {
 
 .swiper-slide img {
     width: 100%;
-    display: block;
+    height: 300px; 
     object-fit: cover;
+    object-position: center;
+    display: block;
+    border-radius: 8px; 
+    transition: transform 0.4s ease; 
 }
+
+.swiper-slide img:hover {
+    transform: scale(1.1);
+}
+
 
 /* Footer */
 footer {
@@ -154,36 +158,76 @@ footer {
 
 footer section h3 {
     margin-bottom: 0.5rem;
-    font-weight: 600;
+    font-weight: 200;
+    font-size: xx-large;
+    font-family: 'Ma Shan Zheng', cursive;
 }
 
 footer p {
     font-size: 0.9rem;
 }
 
-/* --- PORTADA --- */
+/* === PORTADA CON VIDEO Y TEXTO ANIMADO === */
 .portada {
     position: relative;
     width: 100%;
-    height: 60vh;
-    background-image: url('../img/portada.jpg'); /* Cambia la ruta si quieres otra imagen */
-    background-size: cover;
-    background-position: center;
+    height: 100vh;
+    overflow: hidden;
     display: flex;
     align-items: center;
     justify-content: center;
-    color: white;
-    text-shadow: 2px 2px 8px rgba(0,0,0,0.8);
-}
-
-.portada-texto h1 {
-    font-size: 3rem;
     text-align: center;
-    padding: 0 1rem;
-    font-weight: 700;
-    letter-spacing: 2px;
-}
-
+  }
+  
+  /* Video a pantalla completa */
+  .video-portada {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    z-index: -1;
+  }
+  
+  /* Texto centrado, glow, animación y tipografía china */
+  .portada-texto h1 {
+    font-family: 'Ma Shan Zheng', cursive;
+    font-size: 5rem;
+    font-weight: 300;
+    color: #fff;
+    opacity: 0;
+    animation: fadeInSlide 8.5s ease forwards;
+    text-shadow:
+      0 0 8px rgba(26, 21, 21, 0.6),
+      0 0 20px rgba(14, 13, 13, 0.5),
+      2px 2px 6px rgba(0, 0, 0, 0.9); /* sombra negra suave */
+  }
+  
+  /* Animación de entrada */
+  @keyframes fadeInSlide {
+    0% {
+      opacity: 0;
+      transform: translateY(30px);
+    }
+    100% {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+  
+  /* RESPONSIVE para móvil */
+  @media (max-width: 768px) {
+    .portada-texto h1 {
+      font-size: 2.2rem;
+      padding: 0 1rem;
+    }
+  
+    .video-portada {
+      object-fit: cover;
+    }
+  }
+  
 /* --- CONTENIDO PRINCIPAL --- */
 .principal-contenido {
     max-width: 900px;
@@ -234,12 +278,14 @@ footer p {
     padding-bottom: 0.5rem;
     margin-bottom: 1rem;
     color: var(--color-secondary);
-    font-weight: 700;
+    font-weight: 200;
+    font-size: xx-large;
+    font-family: 'Ma Shan Zheng', cursive;
 }
 
 .categoria ul {
     list-style: none;
-}
+    font-family: 'Noto Serif', serif; }
 
 .categoria ul li {
     display: flex;
@@ -320,6 +366,9 @@ footer p {
         height: calc(100vh - 60px);
         overflow-y: auto;
         z-index: 1500;
+        font-weight: 200;
+        font-size: xx-large;
+        font-family: 'Ma Shan Zheng', cursive;
     }
 
     nav.menu.menu-open {
@@ -331,7 +380,9 @@ footer p {
         font-size: 1.2rem;
         border-bottom: 1px solid rgba(255,255,255,0.2);
         text-align: center;
-    }
+        font-weight: 200;
+        font-size: xx-large;
+        font-family: 'Ma Shan Zheng', cursive;    }
 
     /* Logo más pequeño en móvil */
     .logo img {
@@ -384,13 +435,11 @@ footer p {
     }
 }
 @media (max-width: 768px) {
-    /* Portada texto más pequeño y con padding */
     .portada-texto h1 {
       font-size: 2rem;
       padding: 0 1rem;
     }
   
-    /* Ajustar altura de la portada para que no ocupe tanto */
     .portada {
       height: 50vh;
     }
@@ -401,7 +450,6 @@ footer p {
       padding: 0 1rem;
     }
   
-    /* Items de la carta en columna para que se lean bien */
     .categoria ul li {
       flex-direction: column;
       align-items: flex-start;
@@ -423,3 +471,129 @@ footer p {
       word-wrap: break-word;
     }
   }
+  /* === PORTADA PARA LA CARTA === */
+  .portada-img {
+    position: relative;
+    width: 100%;
+    height: 100vh;
+    overflow: hidden;
+  }
+  
+  .img-portada-fondo {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    z-index: 1;
+  }
+  
+  .portada-texto {
+    position: relative;
+    z-index: 2;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+  }
+  
+  .portada-texto h1 {
+    font-size: 3.5rem;
+    color: white;
+    text-shadow: 2px 2px 8px rgba(0,0,0,0.8);
+    animation: fadeInUp 1s ease-out both;
+    padding: 0 1rem;
+  }
+  
+  /* Animación de entrada */
+  @keyframes fadeInUp {
+    0% {
+      opacity: 0;
+      transform: translateY(30px);
+    }
+    100% {
+      opacity: 1;
+      transform: translateY(0);
+    }
+}
+/* ==== INTRODUCCIÓN + BOTÓN CARTA ==== */
+.intro {
+    background-color: var(--color-bg);
+    padding: 3rem 1rem;
+    text-align: center;
+  }
+  
+  .intro-contenido {
+    max-width: 800px;
+    margin: 0 auto;
+  }
+  
+  .intro h2 {
+    font-size: 2.2rem;
+    color: var(--color-secondary);
+    margin-bottom: 1rem;
+    font-weight: 700;
+  }
+  
+  .intro p {
+    font-size: 1.1rem;
+    color: var(--color-text);
+    margin-bottom: 2rem;
+    line-height: 1.6;
+  }
+  
+  .btn-carta {
+    background-color: var(--color-primary);
+    color: white;
+    padding: 1rem 2rem;
+    font-size: 1.1rem;
+    text-decoration: none;
+    border-radius: 50px;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+  }
+  
+  .btn-carta:hover {
+    background-color: var(--color-accent);
+    color: var(--color-text);
+    transform: scale(1.05);
+  }
+  .turismo-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+    gap: 2rem;
+    margin-top: 1.5rem;
+  }
+  
+  .turismo-item {
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+    overflow: hidden;
+    transition: transform 0.3s ease;
+  }
+  
+  .turismo-item:hover {
+    transform: translateY(-5px);
+  }
+  
+  .turismo-item img {
+    width: 100%;
+    height: 160px;
+    object-fit: cover;
+  }
+  
+  .turismo-item h3 {
+    margin: 0.8rem 1rem 0.5rem;
+    color: var(--color-primary);
+    font-size: 1.2rem;
+  }
+  
+  .turismo-item p {
+    margin: 0 1rem 1rem;
+    font-size: 0.95rem;
+    color: #444;
+  }
+  
