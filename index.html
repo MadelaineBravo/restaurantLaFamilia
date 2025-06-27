@@ -1,99 +1,170 @@
-<!DOCTYPE html>
-<html lang="es">
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Restaurante "La Familia"</title>
-  <meta name="description" content="Restaurante familiar con cocina española y china en el corazón de Barcelona. Platos caseros, ambiente acogedor y atención personalizada.">
-  <meta name="keywords" content="restaurante, bar, barcelona, sagrada familia, Padilla, terraza, bocadillos, comida china, asiática, para llevar , tapas, La Familia">
-  <meta name="author" content="Madelaine Bravo">
-  <link rel="icon" href="img/La_Familia_Logo-Photoroom.png" type="image/png">
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.css"/>
-  <link href="https://fonts.googleapis.com/css2?family=Ma+Shan+Zheng&family=Noto+Serif&display=swap" rel="stylesheet">
-
+    <!DOCTYPE html>
+    <html lang="es">
+    <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <title>Restaurante "La Familia"</title>
+    <meta name="description" content="Restaurante familiar con cocina española y china en el corazón de Barcelona. Platos caseros, ambiente acogedor y atención personalizada.">
+    <meta name="keywords" content="restaurante, bar, barcelona, sagrada familia, Padilla, terraza, bocadillos, comida china, asiática, para llevar , tapas, La Familia">
+    <meta name="Madelaine Bravo" content="Restaurante La Familia">
+    <link rel="icon" href="img/La_Familia_Logo-Photoroom.png" type="image/png">
+    <link rel="stylesheet" href="./CSS/style.css">
+    <!-- Swiper CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.css"/>
+    <link href="https://fonts.googleapis.com/css2?family=Ma+Shan+Zheng&display=swap" rel="stylesheet">
 </head>
-<body>
+    <body>
 
-<header>
-  <div class="header-container">
-    <div class="menu-toggle" onclick="toggleMenu()">☰</div>
-    <div class="logo">
-      <img src="img/La_Familia_Logo-Photoroom.png" alt="La Familia" />
+    <header>
+    <div class="header-container">
+        <!-- Menú hamburguesa -->
+        <div class="menu-toggle" onclick="toggleMenu()">☰</div>
+
+        <!-- Logo -->
+        <div class="logo">
+        <img src="img/La_Familia_Logo-Photoroom.png" alt="La Familia" />
+        </div>
+
+        <div>
+        <div class="selector-idioma" id="google_translate_element"></div>
+        </div>
+        
+        <!-- Navegación -->
+        <nav class="menu">
+        <a href="./index.html">Inicio</a>
+        <a href="./pages/carta.html">Menú</a>
+        <a href="./pages/donde-encontrarnos.html">Dónde encontrarnos</a>
+        </nav>
     </div>
-    <div id="google_translate_element"></div>
-    <nav class="menu">
-      <a href="./index.html">Inicio</a>
-      <a href="./pages/carta.html">Menú</a>
-      <a href="./pages/donde-encontrarnos.html">Dónde encontrarnos</a>
-    </nav>
-  </div>
-</header>
+    </header>
+    <section class="portada">
+        <video autoplay muted loop playsinline class="video-portada">
+            <source src="img/VIDEOPORTADA.mp4" type="video/mp4">
+        </video>
+        <div class="portada-texto">
+          <h1>“Cocina creativa, elaborado con pasión”</h1>
+        </div>
+      </section>
+    <main>
+        <section class="intro">
+            <div class="intro-contenido">
+              <h2>Una experiencia familiar</h2>
+              <p>
+                En <strong>La Familia</strong>, te invitamos a disfrutar de una cocina casera con sabores auténticos y un ambiente acogedor en el corazón de Barcelona. Ven a compartir momentos inolvidables con nosotros.
+              </p>
+              <a href="./pages/carta.html" class="btn-carta">Conoce nuestra carta</a>
+            </div>
+          </section>
+          
+          <section class="carrusel-section">
+            <h2>Nuestras Instalaciones</h2>
+            <div class="swiper instalacionesSwiper">
+              <div class="swiper-wrapper">
+                <div class="swiper-slide"><img src="img/barra.jpeg" alt="Instalación 1"></div>
+                <div class="swiper-slide"><img src="img/entrada.jpeg" alt="Instalación 2"></div>
+                <div class="swiper-slide"><img src="img/terraza.jpeg" alt="Instalación 3"></div>
+                <div class="swiper-slide"><img src="img/salarestaurant.jpeg" alt="Instalación 3"></div>
+                <div class="swiper-slide"><img src="img/pasillorestaurant.jpeg" alt="Instalación 3"></div>
+                <div class="swiper-slide"><img src="img/maquinas.jpeg" alt="Instalación 3"></div>
+              </div>
+              <div class="swiper-pagination"></div>
+            </div>
+          
+            <p style="text-align: center; margin-top: 1rem; font-size: 1.1rem; color: #444;">
+              Nuestro espacio está diseñado para que te sientas como en casa. Ambientes cómodos, detalles acogedores y una decoración que mezcla tradición y modernidad para hacer de tu visita una experiencia agradable y comoda.
+            </p>
+          </section>
+          
 
-<section class="portada">
-  <video autoplay muted loop playsinline class="video-portada">
-    <source src="img/VIDEOPORTADA.mp4" type="video/mp4">
-  </video>
-  <div class="portada-texto">
-    <h1>“Cocina creativa, elaborado con pasión”</h1>
-  </div>
-</section>
-
-<main>
-  <section class="intro">
-    <div class="intro-contenido">
-      <h2>Una experiencia familiar</h2>
-      <p>En <strong>La Familia</strong>, te invitamos a disfrutar de una cocina casera con sabores auténticos y un ambiente acogedor en el corazón de Barcelona. Ven a compartir momentos inolvidables con nosotros.</p>
-      <a href="./pages/carta.html" class="btn-carta">Conoce nuestra carta</a>
+    <footer class="footer">
+    <div class="footer-container">
+        <div class="footer-section">
+        <h3>La Familia</h3>
+        <p>Bar Restaurante.<br>Desde 2020 en el corazón de Barcelona.</p>
+        </div>
+        <div class="footer-section">
+        <h4>Dirección</h4>
+        <p>C/ de Padilla, 223<br>Eixample, 08013 Barcelona</p>
+        </div>
     </div>
-  </section>
-
-  <section class="carrusel-section">
-    <h2>Nuestras Instalaciones</h2>
-    <div class="swiper instalacionesSwiper">
-      <div class="swiper-wrapper">
-        <div class="swiper-slide"><img src="img/barra.jpeg" alt="Instalación 1"></div>
-        <div class="swiper-slide"><img src="img/entrada.jpeg" alt="Instalación 2"></div>
-        <div class="swiper-slide"><img src="img/terraza.jpeg" alt="Instalación 3"></div>
-      </div>
-      <div class="swiper-pagination"></div>
+    <div class="footer-bottom">
+        <p>© 2025 Bar Restaurante La Familia. Todos los derechos reservados.</p>
     </div>
-  </section>
-</main>
+    </footer>
 
-<footer>
-  <h3>La Familia</h3>
-  <p>Bar Restaurante.<br>Desde 2020 en el corazón de Barcelona.</p>
-  <p>© 2025 Bar Restaurante La Familia. Todos los derechos reservados.</p>
-</footer>
+    <!-- Swiper JS -->
+    <script src="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.js"></script>
 
-<!-- Scripts -->
-<script src="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.js"></script>
-<script>
-  function toggleMenu() {
-    const menu = document.querySelector('nav.menu');
-    menu.classList.toggle('menu-open');
-  }
+    <script>
+    function googleTranslateElementInit() {
+        new google.translate.TranslateElement({
+        pageLanguage: 'es',
+        includedLanguages: 'es,ca,en,zh-CN',
+        layout: google.translate.TranslateElement.InlineLayout.SIMPLE
+        }, 'google_translate_element');
+    }
 
-  const swiper = new Swiper('.instalacionesSwiper', {
-    loop: true,
-    pagination: {
-      el: '.swiper-pagination',
-      clickable: true,
-    },
-    autoplay: {
-      delay: 4000,
-      disableOnInteraction: false,
-    },
-  });
+    function toggleMenu() {
+        const menu = document.querySelector('nav.menu');
+        menu.classList.toggle('menu-open');
+    }
 
-  function googleTranslateElementInit() {
-    new google.translate.TranslateElement({
-      pageLanguage: 'es',
-      includedLanguages: 'es,ca,en,zh-CN',
-      layout: google.translate.TranslateElement.InlineLayout.SIMPLE
-    }, 'google_translate_element');
-  }
-</script>
-<script type="text/javascript" src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
-</body>
-</html>
+    function closeMenuOnLinkClick() {
+        const menu = document.querySelector('nav.menu');
+        if (menu.classList.contains('menu-open')) {
+        menu.classList.remove('menu-open');
+        }
+    }
+
+    document.querySelectorAll('nav.menu a').forEach(link => {
+        link.addEventListener('click', closeMenuOnLinkClick);
+    });
+
+    let lastScrollTop = 0;
+    const header = document.querySelector('header');
+
+    window.addEventListener('scroll', () => {
+        let scrollTop = window.pageYOffset || document.documentElement.scrollTop;
+        if (scrollTop > lastScrollTop && scrollTop > 100) {
+        header.classList.add('oculto');
+        } else {
+        header.classList.remove('oculto');
+        }
+        lastScrollTop = scrollTop <= 0 ? 0 : scrollTop;
+    });
+
+    // Inicialización de Swiper para Platos Populares
+    const platosSwiper = new Swiper('.platosSwiper', {
+        loop: true,
+        pagination: {
+        el: '.platosSwiper .swiper-pagination',
+        clickable: true,
+        },
+        slidesPerView: 1,
+        spaceBetween: 10,
+        autoplay: {
+        delay: 3000,
+        disableOnInteraction: false,
+        },
+    });
+
+    // Inicialización de Swiper para Instalaciones
+    const instalacionesSwiper = new Swiper('.instalacionesSwiper', {
+        loop: true,
+        pagination: {
+        el: '.instalacionesSwiper .swiper-pagination',
+        clickable: true,
+        },
+        slidesPerView: 1,
+        spaceBetween: 10,
+        autoplay: {
+        delay: 4000,
+        disableOnInteraction: false,
+        },
+    });
+    </script>
+
+    <script type="text/javascript" src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
+
+    </body>
+    </html>
