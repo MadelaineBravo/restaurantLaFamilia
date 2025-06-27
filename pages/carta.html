@@ -80,96 +80,272 @@
 
     <main>
         <section class="carta-section">
-          <div class="filtro-categorias">
-            <button class="filtro-btn active" data-categoria="todos">Todos</button>
-            <button class="filtro-btn" data-categoria="entrantes">Entrantes</button>
-            <button class="filtro-btn" data-categoria="platos-principales">Platos Principales</button>
-            <button class="filtro-btn" data-categoria="postres">Postres</button>
-            <button class="filtro-btn" data-categoria="bebidas">Bebidas</button>
-            <button class="filtro-btn" data-categoria="cocteles">Cócteles</button>
-            <button class="filtro-btn" data-categoria="desayunos">Desayunos</button>
-            <button class="filtro-btn" data-categoria="bocadillos-frios">Bocadillos Fríos</button>
-            <button class="filtro-btn" data-categoria="bocadillos-calientes">Bocadillos Calientes</button>
-            <button class="filtro-btn" data-categoria="asiatica">Comida Asiática</button>
-            <button class="filtro-btn" data-categoria="combinados">Combinados</button>
-            <button class="filtro-btn" data-categoria="pastas-ensaladas">Pastas y Ensaladas</button>
-            <button class="filtro-btn" data-categoria="paellas">Paellas</button>
-            <button class="filtro-btn" data-categoria="china">Comida China</button>
-          </div>
-      
-          <h1>Nuestra Carta</h1>
-      
+            <div class="filtro-categorias">
+              <button class="filtro-btn active" data-categoria="todos">Todos</button>
+              <button class="filtro-btn" data-categoria="entrantes">Entrantes</button>
+              <button class="filtro-btn" data-categoria="platos-principales">Platos Principales</button>
+              <button class="filtro-btn" data-categoria="postres">Postres</button>
+              <button class="filtro-btn" data-categoria="bebidas">Bebidas</button>
+              <button class="filtro-btn" data-categoria="cocteles">Cócteles</button>
+              <button class="filtro-btn" data-categoria="desayunos">Desayunos</button>
+              <button class="filtro-btn" data-categoria="bocadillos-frios">Bocadillos Fríos</button>
+              <button class="filtro-btn" data-categoria="bocadillos-calientes">Bocadillos Calientes</button>
+              <button class="filtro-btn" data-categoria="asiatica">Comida Asiática</button>
+              <button class="filtro-btn" data-categoria="combinados">Combinados</button>
+              <button class="filtro-btn" data-categoria="pastas-ensaladas">Pastas y Ensaladas</button>
+              <button class="filtro-btn" data-categoria="paellas">Paellas</button>
+              <button class="filtro-btn" data-categoria="china">Comida China</button>
+            </div>
+        
+            <h1>Nuestra Carta</h1>
+        
+            <article class="categoria" data-categoria="entrantes">
+              <h2>Entrantes</h2>
+              <ul>
+                <li>
+                  <h3>Ensalada Mixta</h3>
+                  <p>Lechuga, tomate, cebolla y aceitunas con aliño casero.</p>
+                  <span class="precio">5,50 €</span>
+                </li>
+                <li>
+                  <h3>Calamares a la romana</h3>
+                  <p>Calamares rebozados y fritos con limón.</p>
+                  <span class="precio">7,20 €</span>
+                </li>
+                <li>
+                  <h3>Croquetas caseras</h3>
+                  <p>De jamón ibérico, cremosas y crujientes.</p>
+                  <span class="precio">6,00 €</span>
+                </li>
+                <li>
+                  <h3>Sopa de marisco</h3>
+                  <p>Caldo intenso con mariscos frescos y toque picante.</p>
+                  <span class="precio">6,80 €</span>
+                </li>
+              </ul>
+            </article>
+        
+            <article class="categoria" data-categoria="platos-principales">
+              <h2>Platos Principales</h2>
+              <ul>
+                <li>
+                  <h3>Solomillo de ternera</h3>
+                  <p>Solomillo a la parrilla con salsa de champiñones.</p>
+                  <span class="precio">15,00 €</span>
+                </li>
+                <li>
+                  <h3>Salmón al horno</h3>
+                  <p>Salmón fresco con hierbas y guarnición de verduras.</p>
+                  <span class="precio">14,50 €</span>
+                </li>
+                <li>
+                  <h3>Pollo a la cerveza</h3>
+                  <p>Pollo tierno cocinado en salsa de cerveza artesanal.</p>
+                  <span class="precio">12,00 €</span>
+                </li>
+                <li>
+                  <h3>Lasaña casera</h3>
+                  <p>Capas de pasta con carne, bechamel y queso gratinado.</p>
+                  <span class="precio">11,50 €</span>
+                </li>
+              </ul>
+            </article>
+        
+            <article class="categoria" data-categoria="postres">
+              <h2>Postres</h2>
+              <ul>
+                <li>
+                  <h3>Tarta de queso</h3>
+                  <p>Suave tarta con base de galleta y coulis de fresa.</p>
+                  <span class="precio">4,50 €</span>
+                </li>
+                <li>
+                  <h3>Brownie con helado</h3>
+                  <p>Brownie caliente con bola de helado de vainilla.</p>
+                  <span class="precio">5,00 €</span>
+                </li>
+                <li>
+                  <h3>Flan casero</h3>
+                  <p>Flan tradicional con caramelo líquido.</p>
+                  <span class="precio">4,00 €</span>
+                </li>
+                <li>
+                  <h3>Fruta fresca</h3>
+                  <p>Selección de fruta de temporada fresca y jugosa.</p>
+                  <span class="precio">3,80 €</span>
+                </li>
+              </ul>
+            </article>
+        
+            <article class="categoria" data-categoria="bebidas">
+              <h2>Bebidas</h2>
+              <ul>
+                <li>
+                  <h3>Agua mineral</h3>
+                  <p>Botella de agua mineral natural o con gas.</p>
+                  <span class="precio">2,00 €</span>
+                </li>
+                <li>
+                  <h3>Refrescos</h3>
+                  <p>Coca-Cola, Fanta, Sprite y más.</p>
+                  <span class="precio">2,50 €</span>
+                </li>
+                <li>
+                  <h3>Café espresso</h3>
+                  <p>Café intenso recién hecho.</p>
+                  <span class="precio">1,80 €</span>
+                </li>
+                <li>
+                  <h3>Zumo natural</h3>
+                  <p>Zumo de naranja o manzana natural.</p>
+                  <span class="precio">3,00 €</span>
+                </li>
+              </ul>
+            </article>
           <article class="categoria" data-categoria="desayunos">
             <h2>Desayunos</h2>
             <ul>
-              <li><h3>Tostadas con tomate y aceite</h3><p>Pan crujiente con tomate natural y aceite de oliva virgen extra.</p><span class="precio">3,00 €</span></li>
-              <li><h3>Café con croissant</h3><p>Café al gusto acompañado de un croissant recién horneado.</p><span class="precio">3,50 €</span></li>
+              <li>
+                <h3>Tostadas con tomate y aceite</h3>
+                <p>Pan crujiente con tomate natural y aceite de oliva virgen extra.</p>
+                <span class="precio">3,00 €</span>
+              </li>
+              <li>
+                <h3>Café con croissant</h3>
+                <p>Café al gusto acompañado de un croissant recién horneado.</p>
+                <span class="precio">3,50 €</span>
+              </li>
             </ul>
           </article>
       
           <article class="categoria" data-categoria="bocadillos-frios">
             <h2>Bocadillos Fríos</h2>
             <ul>
-              <li><h3>Bocadillo de jamón serrano</h3><p>Jamón serrano sobre pan de barra con tomate.</p><span class="precio">4,20 €</span></li>
-              <li><h3>Bocadillo vegetal</h3><p>Lechuga, tomate, atún y mayonesa en pan integral.</p><span class="precio">4,00 €</span></li>
+              <li>
+                <h3>Bocadillo de jamón serrano</h3>
+                <p>Jamón serrano sobre pan de barra con tomate.</p>
+                <span class="precio">4,20 €</span>
+              </li>
+              <li>
+                <h3>Bocadillo vegetal</h3>
+                <p>Lechuga, tomate, atún y mayonesa en pan integral.</p>
+                <span class="precio">4,00 €</span>
+              </li>
             </ul>
           </article>
       
           <article class="categoria" data-categoria="bocadillos-calientes">
             <h2>Bocadillos Calientes</h2>
             <ul>
-              <li><h3>Bocadillo de lomo con queso</h3><p>Lomo de cerdo a la plancha con queso fundido.</p><span class="precio">4,50 €</span></li>
-              <li><h3>Sándwich mixto</h3><p>Jamón dulce y queso fundido en pan de molde.</p><span class="precio">3,80 €</span></li>
+              <li>
+                <h3>Bocadillo de lomo con queso</h3>
+                <p>Lomo de cerdo a la plancha con queso fundido.</p>
+                <span class="precio">4,50 €</span>
+              </li>
+              <li>
+                <h3>Sándwich mixto</h3>
+                <p>Jamón dulce y queso fundido en pan de molde.</p>
+                <span class="precio">3,80 €</span>
+              </li>
             </ul>
           </article>
       
           <article class="categoria" data-categoria="cocteles">
             <h2>Cócteles</h2>
             <ul>
-              <li><h3>Mojito</h3><p>Ron, hierbabuena, lima, azúcar y soda.</p><span class="precio">6,00 €</span></li>
-              <li><h3>Piña Colada</h3><p>Ron, piña natural y crema de coco.</p><span class="precio">6,50 €</span></li>
+              <li>
+                <h3>Mojito</h3>
+                <p>Ron, hierbabuena, lima, azúcar y soda.</p>
+                <span class="precio">6,00 €</span>
+              </li>
+              <li>
+                <h3>Piña Colada</h3>
+                <p>Ron, piña natural y crema de coco.</p>
+                <span class="precio">6,50 €</span>
+              </li>
             </ul>
           </article>
       
           <article class="categoria" data-categoria="asiatica">
             <h2>Comida Asiática</h2>
             <ul>
-              <li><h3>Pollo al curry</h3><p>Pollo tierno con salsa de curry suave y arroz blanco.</p><span class="precio">9,50 €</span></li>
-              <li><h3>Ramen de cerdo</h3><p>Caldo sabroso con fideos, huevo, cerdo y verduras.</p><span class="precio">10,00 €</span></li>
+              <li>
+                <h3>Pollo al curry</h3>
+                <p>Pollo tierno con salsa de curry suave y arroz blanco.</p>
+                <span class="precio">9,50 €</span>
+              </li>
+              <li>
+                <h3>Ramen de cerdo</h3>
+                <p>Caldo sabroso con fideos, huevo, cerdo y verduras.</p>
+                <span class="precio">10,00 €</span>
+              </li>
             </ul>
           </article>
       
           <article class="categoria" data-categoria="combinados">
             <h2>Combinados</h2>
             <ul>
-              <li><h3>Huevos fritos con patatas y chistorra</h3><p>Plato tradicional completo y sabroso.</p><span class="precio">8,00 €</span></li>
-              <li><h3>Pechuga con arroz y ensalada</h3><p>Plato saludable con proteína y verduras frescas.</p><span class="precio">8,50 €</span></li>
+              <li>
+                <h3>Huevos fritos con patatas y chistorra</h3>
+                <p>Plato tradicional completo y sabroso.</p>
+                <span class="precio">8,00 €</span>
+              </li>
+              <li>
+                <h3>Pechuga con arroz y ensalada</h3>
+                <p>Plato saludable con proteína y verduras frescas.</p>
+                <span class="precio">8,50 €</span>
+              </li>
             </ul>
           </article>
       
           <article class="categoria" data-categoria="pastas-ensaladas">
             <h2>Pastas y Ensaladas</h2>
             <ul>
-              <li><h3>Espaguetis boloñesa</h3><p>Pasta al dente con salsa casera de carne.</p><span class="precio">7,50 €</span></li>
-              <li><h3>Ensalada César</h3><p>Lechuga romana, pollo, picatostes y salsa César.</p><span class="precio">6,80 €</span></li>
+              <li>
+                <h3>Espaguetis boloñesa</h3>
+                <p>Pasta al dente con salsa casera de carne.</p>
+                <span class="precio">7,50 €</span>
+              </li>
+              <li>
+                <h3>Ensalada César</h3>
+                <p>Lechuga romana, pollo, picatostes y salsa César.</p>
+                <span class="precio">6,80 €</span>
+              </li>
             </ul>
           </article>
       
           <article class="categoria" data-categoria="paellas">
             <h2>Paellas</h2>
             <ul>
-              <li><h3>Paella de mariscos</h3><p>Con gambas, mejillones, calamares y arroz con azafrán.</p><span class="precio">13,50 €</span></li>
-              <li><h3>Paella mixta</h3><p>Pollo, conejo y mariscos en arroz sabroso.</p><span class="precio">14,00 €</span></li>
+              <li>
+                <h3>Paella de mariscos</h3>
+                <p>Con gambas, mejillones, calamares y arroz con azafrán.</p>
+                <span class="precio">13,50 €</span>
+              </li>
+              <li>
+                <h3>Paella mixta</h3>
+                <p>Pollo, conejo y mariscos en arroz sabroso.</p>
+                <span class="precio">14,00 €</span>
+              </li>
             </ul>
           </article>
       
           <article class="categoria" data-categoria="china">
             <h2>Comida China</h2>
             <ul>
-              <li><h3>Arroz tres delicias</h3><p>Arroz salteado con jamón, tortilla y guisantes.</p><span class="precio">5,80 €</span></li>
-              <li><h3>Rollitos de primavera</h3><p>Rellenos de verduras crujientes y salsa agridulce.</p><span class="precio">3,50 €</span></li>
+              <li>
+                <h3>Arroz tres delicias</h3>
+                <p>Arroz salteado con jamón, tortilla y guisantes.</p>
+                <span class="precio">5,80 €</span>
+              </li>
+              <li>
+                <h3>Rollitos de primavera</h3>
+                <p>Rellenos de verduras crujientes y salsa agridulce.</p>
+                <span class="precio">3,50 €</span>
+              </li>
             </ul>
           </article>
+      
         </section>
       </main>
       
